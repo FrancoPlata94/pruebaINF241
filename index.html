@@ -1,0 +1,400 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="es"><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Creadent - Ortodoncia & Implantología Oral</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "secondary-fixed": "#e0e3e5",
+                "surface-variant": "#e5e2e1",
+                "inverse-on-surface": "#f3f0ef",
+                "on-error-container": "#93000a",
+                "on-tertiary-fixed": "#301400",
+                "tertiary": "#301500",
+                "secondary-fixed-dim": "#c4c7c9",
+                "tertiary-fixed-dim": "#fcb886",
+                "primary-container": "#003355",
+                "on-primary-fixed-variant": "#21496d",
+                "glass-fill": "rgba(255, 255, 255, 0.7)",
+                "on-error": "#ffffff",
+                "on-secondary": "#ffffff",
+                "on-tertiary-container": "#c98b5d",
+                "error": "#ba1a1a",
+                "primary": "#001d34",
+                "outline-variant": "#c2c7cf",
+                "primary-fixed": "#cfe5ff",
+                "on-secondary-fixed": "#191c1e",
+                "on-primary": "#ffffff",
+                "secondary": "#5c5f61",
+                "on-secondary-fixed-variant": "#444749",
+                "tertiary-container": "#4f2601",
+                "surface-tint": "#3b6186",
+                "on-tertiary-fixed-variant": "#6a3b14",
+                "surface-dim": "#dcd9d9",
+                "on-secondary-container": "#626567",
+                "on-primary-container": "#769cc3",
+                "surface-chalk": "#F8F8F8",
+                "surface-container-highest": "#e5e2e1",
+                "glass-border": "rgba(255, 255, 255, 0.2)",
+                "on-background": "#1b1c1c",
+                "inverse-primary": "#a4caf4",
+                "inverse-surface": "#303030",
+                "on-tertiary": "#ffffff",
+                "tertiary-fixed": "#ffdcc5",
+                "background": "#fcf9f8",
+                "on-primary-fixed": "#001d34",
+                "error-container": "#ffdad6",
+                "surface-bright": "#fcf9f8",
+                "secondary-container": "#e0e3e5",
+                "surface-container": "#f0eded",
+                "primary-fixed-dim": "#a4caf4",
+                "surface-container-lowest": "#ffffff",
+                "on-surface-variant": "#42474e",
+                "surface-container-low": "#f6f3f2",
+                "outline": "#73777f",
+                "surface": "#fcf9f8",
+                "surface-container-high": "#eae7e7",
+                "on-surface": "#1b1c1c"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "baseline": "8px",
+                "container-max": "1280px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "display-lg-mobile": ["Plus Jakarta Sans"],
+                "label-caps": ["Inter"],
+                "headline-md": ["Plus Jakarta Sans"],
+                "display-lg": ["Plus Jakarta Sans"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "1.8", "fontWeight": "400"}]
+            }
+        },
+    },
+}
+</script>
+<style>
+  .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+  }
+  .glass-nav {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .hero-shape {
+      clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .dropdown-animate {
+      transform-origin: top;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .group:hover .dropdown-menu {
+      opacity: 1;
+      transform: scaleY(1);
+  }
+</style>
+</head>
+<body class="bg-surface-chalk text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+    
+    <nav class="sticky top-4 mx-auto w-[95%] max-w-container-max rounded-full z-50 flex justify-between items-center px-gutter py-3 shadow-xl border border-primary/20 bg-primary-container">
+        <div class="flex items-center gap-4">
+            <img alt="Logo Creadent" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ">
+            <span class="font-display-lg text-headline-md font-bold text-white hidden lg:block">Creadent</span>
+        </div>
+        
+        <div class="hidden md:flex items-center gap-8 font-body-md text-body-md">
+            <a class="text-white font-bold border-b-2 border-white pb-1" href="index.html">Inicio</a>
+            
+            <div class="relative group">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-2 font-body-md text-body-md" href="marco-teorico.html">
+                    Marco Teórico 
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 dropdown-animate pointer-events-none group-hover:pointer-events-auto border border-outline-variant/30 z-50">
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#introduccion">Introducción</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#antecedentes">Antecedentes</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#problema">Planteamiento del Problema</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#arbol">Árbol de problema</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#formulacion">Formulación del problema</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#proposito">Propósito del estudio</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#metodologia">Metodología</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#planificacion">Planificación de actividades</a>
+                </div>
+            </div>
+            
+            <div class="relative group">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-2 font-body-md text-body-md" href="analisis-estrcuturado.html">
+                    Análisis Estructurado 
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 dropdown-animate pointer-events-none group-hover:pointer-events-auto border border-outline-variant/30 z-50">
+                    <div class="px-6 py-1.5 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo Ambiental</div>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#proposito">Declaración de Propósitos</a>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#contexto">Diagrama de Contexto</a>
+                    
+                    <div class="px-6 py-1.5 mt-2 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo de Comportamiento</div>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#dfd">DFD por Niveles</a>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#der">DER</a>
+                </div>
+            </div>
+            
+            <a class="text-white hover:text-primary-fixed transition-colors" href="orientado-a-objetos.html">Orientado A Objetos</a>
+            <a class="text-white hover:text-primary-fixed transition-colors" href="video.html">Videos</a>
+            <a class="text-white hover:text-primary-fixed transition-colors" href="contactos.html">Contactos</a>
+        </div>
+        
+        <div class="flex items-center gap-4">
+            <button class="hidden lg:flex border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-primary transition-all active:scale-95 shadow-md">Agendar Cita</button>
+            <button class="md:hidden text-white"><span class="material-symbols-outlined text-2xl">menu</span></button>
+        </div>
+    </nav>
+
+    <header class="relative pt-12 pb-24 overflow-hidden">
+        <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8 z-10">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-fixed text-on-primary-fixed rounded-full text-label-caps">
+                    <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    Centro Odontológico de Excelencia
+                </div>
+                <div>
+                    <h1 class="font-display-lg text-display-lg text-primary mb-4 leading-tight">
+                        Creadent cuida tu <span class="text-surface-tint italic">Sonrisa</span>
+                    </h1>
+                    <p class="font-headline-md text-headline-md text-secondary leading-relaxed">
+                        Precisión e innovación en ortodoncia e implantes.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-4">
+                    <a class="bg-primary text-on-primary px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:translate-y-[-2px] transition-all" href="#">Ver Servicios</a>
+                    <a class="border-2 border-primary text-primary px-8 py-4 rounded-full font-bold hover:bg-primary/5 transition-all" href="#">Conoce la Clínica</a>
+                </div>
+                <div class="flex items-center gap-8 pt-8 border-t border-outline-variant">
+                    <div>
+                        <p class="font-display-lg text-headline-md text-primary">15+</p>
+                        <p class="text-label-caps text-secondary">Años de Exp.</p>
+                    </div>
+                    <div>
+                        <p class="font-display-lg text-headline-md text-primary">5k+</p>
+                        <p class="text-label-caps text-secondary">Pacientes</p>
+                    </div>
+                    <div>
+                        <p class="font-display-lg text-headline-md text-primary">100%</p>
+                        <p class="text-label-caps text-secondary">Garantía</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative group">
+                <div class="absolute inset-0 bg-primary/10 rounded-[4rem] rotate-3 scale-105 transition-transform group-hover:rotate-6"></div>
+                <div class="relative rounded-[4rem] overflow-hidden shadow-2xl border-4 border-white">
+                    <img alt="Clínica Creadent" class="w-full h-full object-cover aspect-[4/5] transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLtfmkjAaEmsENGt1t02zEKNrLcXT-I2BMcROb6a0rnYEODx6JiXlrI5k7RJPxay_HFejlSqdQmMfBIYEyGwtaXaTGRnNFdmes5TZAsRyUgd-EyqgnXkKFCi6JQ3J9ELUezCHPYPBWx3AZYYwOQW2dX3bVg8lDoGJsYEwADrc8AxKrbsFNRjGSh_dn1LIuR8m7JvHxgIuVmUy8E55_w04SklvM-HU9p54xDZ2i0J8qXiiuMgo1X2S92rIT6x">
+                </div>
+                <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-3xl shadow-xl border border-outline-variant/30 flex items-center gap-4 animate-bounce">
+                    <div class="bg-primary-fixed p-3 rounded-full">
+                        <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+                    </div>
+                    <div>
+                        <p class="font-bold text-primary">Tecnología 3D</p>
+                        <p class="text-xs text-secondary">Última generación</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-24 bg-surface-container-lowest">
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                <div class="order-2 lg:order-1 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4 pt-12">
+                            <img class="rounded-3xl shadow-lg w-full aspect-square object-cover" data-alt="High-end dental office interior with modern equipment and clinical lighting in a soft blue and white palette to convey hygiene and premium care." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAZzXRd0Bv1UaQDUI1wf6z8B5dMj1qfGKLRYvvo2VDXTC_Ac55eMSvVWl12x7V4BMDBb9aVdz1IcUljeRqYNcHdoZZaXZzfZVunBCMIUrk6zurwypS-kfiBy8Z5kwGfbfDHLTManK0I6v3C7pRKkLjnjH4w0hul7RMe6gWCClKT1Si_XbF2-yHWkoMpMaN9_U0tVR7cSAX6ko2IpmpPBqq8x0IKcOjjtWzdUrBBX37Kt6gd6hhQD-VwsSoZL4IXIWffJYZPxi5uHmY">
+                            <div class="bg-primary p-8 rounded-3xl text-on-primary">
+                                <p class="text-display-lg-mobile font-bold mb-2">98%</p>
+                                <p class="text-sm opacity-80 uppercase tracking-widest font-label-caps">Satisfacción</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <img class="rounded-3xl shadow-lg w-full aspect-[3/4] object-cover" data-alt="A focused dentist working with precise medical tools under bright, clean surgical lighting, emphasizing expertise and attention to detail in a modern clinical setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAM-sbpvRjE_N7p0LD-F9a09yFWgmFn5PEVpzi7jhv80ah9uYd1HG997sapzEivJl86lQiDk9z8PEnW5_Vya0tTt_ZjZuqveODk_6WX0I6A7JpJ9GNNqNZzLSIJSHceh4ky5TfRL18SbgNOzyTL-RkVjYbaiNvw6wq6KsZU2oKiOmf4Px0mgCnIGhW82vFZWPQeZpFJ1YYMwwTgPX45_I9Uj3JmUmACBmbYt-Ogmb-TrDwTK_Mr1nEiDuLFSINP4Km4j1hhjIdezyc">
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 space-y-6">
+                    <h2 class="text-label-caps text-surface-tint">Sobre Nosotros</h2>
+                    <h3 class="font-display-lg text-display-lg text-primary">Sistema de Gestión de Consultorio Creadent</h3>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">
+                        El consultorio dental "Creadent" se ha consolidado como un centro odontológico de referencia en La Paz, enfocado en brindar un cuidado integral y personalizado para la salud bucal.
+                    </p>
+                    <p class="text-secondary leading-relaxed">
+                        Con una destacada especialización en ortodoncia e implantología, la clínica se dedica a ofrecer soluciones dentales avanzadas y un servicio de alta calidad, apoyándose en la optimización del tiempo clínico y la mejora continua de la experiencia del paciente.
+                    </p>
+                    <ul class="space-y-4 pt-4">
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="font-semibold text-primary">Especialistas Certificados</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="font-semibold text-primary">Tratamientos Personalizados</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="font-semibold text-primary">Atención de Emergencia</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24">
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-label-caps text-surface-tint">Nuestro Conocimiento</h2>
+                <h3 class="font-display-lg text-display-lg text-primary">Nuestros Servicios Especializados</h3>
+                <p class="text-secondary">Explora la fundamentación técnica y los modelos ambientales que sustentan nuestra operación eficiente y segura.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="bg-white rounded-[2.5rem] p-8 shadow-sm hover:shadow-xl transition-all border border-outline-variant/20 flex flex-col group">
+                    <div class="mb-8 overflow-hidden rounded-2xl aspect-square bg-surface-container-low flex items-center justify-center">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB4zpubdJ8s4MfAsoLPkY4dvhiAAw3-6DFpHHbgCVtVkhWCjV3tp32tG74wONl-Ca1t49ol-1-5lsikpsKFOguHLsOu2A6BPZV0vHz0Ya2zb5G0geMIJsW4Wm-f10Jtbs31UwCPixifEhzInfxxZGlVRsx8QqnNhYea2lbA-Zc2lhdY2CFZ4FopruD8ISOoYtiNT66JpQ1dsZKqZ86AigY8Wa7y9hEz2vBjMvPUq7MYERG6jE6N4Uio3QkrvBvjgBcXXvM44YByPfx" alt="Ortodoncia Avanzada" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h4 class="font-headline-md text-headline-md text-primary mb-4">Ortodoncia Avanzada</h4>
+                    <p class="text-on-surface-variant mb-8 flex-grow">Especialistas en alineación dental y ortodoncia invisible para lograr la sonrisa perfecta con la tecnología más avanzada.</p>
+                    <a class="inline-flex items-center gap-2 font-bold text-primary hover:gap-4 transition-all group/link" href="#">Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </div>
+                <div class="bg-white rounded-[2.5rem] p-8 shadow-sm hover:shadow-xl transition-all border border-outline-variant/20 flex flex-col group">
+                    <div class="mb-8 overflow-hidden rounded-2xl aspect-square bg-surface-container-low flex items-center justify-center">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCah6VUqygrGlusKAuzro1FI6cL9rswtPNsmspVdbO2R_HgFkHzg2-Hl2uG0u_1YTb_JS_ujVgGVcT0ybJ5cNwBrgjCxzv-OY9baNU70PAFbtOfiDs8udjV0Ov8JDeosFRzRs3VBhdqFFhmP431l3Kk5wx8B8wI6kFwBHFvELRtL5R08LDxeB_HhUcqXSRFrbn4kTAbAxFI__pZ4p6BKINGQBpo_hoW98Nn9IRby5uF-Uc-Uj5oV2RMpF490kyx6_AlTNOXbsEX0FNb" alt="Implantes Dentales" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h4 class="font-headline-md text-headline-md text-primary mb-4">Implantes Dentales</h4>
+                    <p class="text-on-surface-variant mb-8 flex-grow">Recupera la funcionalidad y estética de tu mouth con implantes de alta gama y procedimientos mínimamente invasivos.</p>
+                    <a class="inline-flex items-center gap-2 font-bold text-primary hover:gap-4 transition-all group/link" href="#">Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </div>
+                <div class="bg-white rounded-[2.5rem] p-8 shadow-sm hover:shadow-xl transition-all border border-outline-variant/20 flex flex-col group">
+                    <div class="mb-8 overflow-hidden rounded-2xl aspect-square bg-surface-container-low flex items-center justify-center">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcHMuE3dtZsXHPhltcy-3yqiy2pFl7sq-xQsV5_CWuYQ1zb_ux0PEpCcLhUkTkILI76KOHS3iSTxIe4wssaLDBQEgdVR2Tf3xc8IjVJ05igvhlof-2ezT37f30qADE5vRiLRMrhmsQOpeSaS4tLEVApRBYeN45HuST7Q4vvQachoGzI51fR1PdOx3XM0KTu6_vdQ2HYp6uMocVqb4wV9f2T3tyi5tWpa5rqV-iX09U3B3WJkVf_y7njgYVNb8Vrlc6qJyzb-Kepf1z" alt="Blanqueamiento Profesional" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h4 class="font-headline-md text-headline-md text-primary mb-4">Blanqueamiento Profesional</h4>
+                    <p class="text-on-surface-variant mb-8 flex-grow">Tratamientos de aclaramiento dental seguro y eficaz para devolverle el brillo natural a tu sonrisa en pocas sesiones.</p>
+                    <a class="inline-flex items-center gap-2 font-bold text-primary hover:gap-4 transition-all group/link" href="#">Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pt-24 pb-12 border-t border-outline-variant bg-primary text-on-primary">
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img alt="Logo Creadent" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ">
+                        <span class="font-display-lg text-headline-md font-bold text-white">Creadent</span>
+                    </div>
+                    <p class="text-on-surface-variant text-white/80">Excelencia en ortodoncia e implantología para devolverte la confianza de una sonrisa perfecta.</p>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full text-on-primary flex items-center justify-center hover:scale-110 transition-transform bg-white text-primary" href="#">
+                            <span class="material-symbols-outlined text-sm">face_nod</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full text-on-primary flex items-center justify-center hover:scale-110 transition-transform bg-white text-primary" href="#">
+                            <span class="material-symbols-outlined text-sm">camera</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full text-on-primary flex items-center justify-center hover:scale-110 transition-transform bg-white text-primary" href="#">
+                            <span class="material-symbols-outlined text-sm">mail</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <h5 class="font-bold uppercase tracking-widest text-sm text-white">Enlaces Rápidos</h5>
+                    <ul class="space-y-3">
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="marco-teorico.html">Marco Teórico</a></li>
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="analisis-estructurado.html">Análisis Estructurado</a></li>
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="orientado-a-objetos.html">Orientado a Objetos</a></li>
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h5 class="font-bold uppercase tracking-widest text-sm text-white">Servicios</h5>
+                    <ul class="space-y-3">
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Ortodoncia Invisible</a></li>
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Implantes Dentales</a></li>
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Blanqueamiento</a></li>
+                        <li class=""><a class="text-on-surface-variant hover:text-white transition-colors text-white/80" href="#">Odontopediatría</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h5 class="font-bold uppercase tracking-widest text-sm text-white">Contacto</h5>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-on-surface-variant text-white/80">
+                            <span class="material-symbols-outlined">phone</span>
+                            +591 69987205
+                        </li>
+                        <li class="flex items-center gap-3 text-on-surface-variant text-white/80">
+                            <span class="material-symbols-outlined">mail</span>
+                            luque2219@gmail.com
+                        </li>
+                        <li class="flex items-center gap-3 text-on-surface-variant text-white/80">
+                            <span class="material-symbols-outlined">location_on</span>
+                            La Paz, Bolivia
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-outline-variant/30 text-center flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-secondary text-white/80">© 2026 Creadent Ortodoncia & Implantología Oral. Todos los derechos reservados.</p>
+                <div class="flex gap-8 text-sm font-semibold text-white">
+                    <a class="" href="#">Privacidad</a>
+                    <a class="" href="#">Términos</a>
+                    <a class="" href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center opacity-0 pointer-events-none transition-all hover:scale-110 z-40" id="scroll-top">
+        <span class="material-symbols-outlined">arrow_upward</span>
+    </button>
+
+    <script>
+        const scrollBtn = document.getElementById('scroll-top');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollBtn.classList.remove('opacity-0', 'pointer-events-none');
+                scrollBtn.classList.add('opacity-100');
+            } else {
+                scrollBtn.classList.add('opacity-0', 'pointer-events-none');
+                scrollBtn.classList.remove('opacity-100');
+            }
+        };
+        scrollBtn.onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+</body></html>

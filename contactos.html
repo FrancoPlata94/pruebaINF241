@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Contacto | Creadent Ortodoncia & Implantología</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-primary": "#ffffff",
+                "secondary-container": "#e0e3e5",
+                "surface-container-high": "#eae7e7",
+                "outline": "#73777f",
+                "surface-dim": "#dcd9d9",
+                "inverse-surface": "#303030",
+                "secondary-fixed-dim": "#c4c7c9",
+                "on-tertiary-fixed": "#301400",
+                "glass-fill": "rgba(255, 255, 255, 0.7)",
+                "surface-container-highest": "#e5e2e1",
+                "surface": "#fcf9f8",
+                "surface-chalk": "#F8F8F8",
+                "secondary-fixed": "#e0e3e5",
+                "primary-container": "#003355",
+                "on-secondary-fixed": "#191c1e",
+                "outline-variant": "#c2c7cf",
+                "on-tertiary-container": "#c98b5d",
+                "background": "#fcf9f8",
+                "on-primary-fixed-variant": "#21496d",
+                "on-error-container": "#93000a",
+                "surface-bright": "#fcf9f8",
+                "on-surface-variant": "#42474e",
+                "on-secondary-fixed-variant": "#444749",
+                "on-primary-fixed": "#001d34",
+                "primary-fixed": "#cfe5ff",
+                "tertiary-fixed": "#ffdcc5",
+                "secondary": "#5c5f61",
+                "inverse-primary": "#a4caf4",
+                "surface-tint": "#3b6186",
+                "tertiary": "#301500",
+                "tertiary-fixed-dim": "#fcb886",
+                "primary-fixed-dim": "#a4caf4",
+                "on-tertiary-fixed-variant": "#6a3b14",
+                "on-secondary-container": "#626567",
+                "surface-container-lowest": "#ffffff",
+                "glass-border": "rgba(255, 255, 255, 0.2)",
+                "tertiary-container": "#4f2601",
+                "error-container": "#ffdad6",
+                "on-surface": "#1b1c1c",
+                "on-tertiary": "#ffffff",
+                "primary": "#001d34",
+                "on-error": "#ffffff",
+                "surface-container-low": "#f6f3f2",
+                "on-background": "#1b1c1c",
+                "on-secondary": "#ffffff",
+                "surface-container": "#f0eded",
+                "inverse-on-surface": "#f3f0ef",
+                "on-primary-container": "#769cc3",
+                "error": "#ba1a1a",
+                "surface-variant": "#e5e2e1"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "margin-mobile": "20px",
+                "margin-desktop": "64px",
+                "container-max": "1280px",
+                "baseline": "8px",
+                "gutter": "24px"
+            },
+            "fontFamily": {
+                "headline-md": ["Plus Jakarta Sans"],
+                "display-lg-mobile": ["Plus Jakarta Sans"],
+                "label-caps": ["Inter"],
+                "body-lg": ["Inter"],
+                "display-lg": ["Plus Jakarta Sans"],
+                "body-md": ["Inter"]
+            },
+            "fontSize": {
+                "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.8", "fontWeight": "400"}],
+                "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+        },
+    },
+}
+</script>
+<style>
+  .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+  }
+  body {
+      background-color: #fcf9f8;
+      -webkit-font-smoothing: antialiased;
+  }
+  .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 40px 40px -20px rgba(0, 51, 85, 0.04);
+  }
+  .form-focus-glow:focus {
+      box-shadow: 0 0 0 2px rgba(0, 29, 52, 0.1);
+  }
+  
+  /* Animación Premium para Menús Desplegables Flotantes */
+  .dropdown-animate {
+      transform-origin: top;
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .group:hover .dropdown-menu {
+      opacity: 1;
+      transform: scaleY(1);
+  }
+</style>
+</head>
+<body class="font-body-md text-on-surface">
+
+    <nav class="sticky top-4 mx-auto w-[95%] max-w-container-max rounded-full z-50 flex justify-between items-center px-gutter py-3 shadow-xl border border-primary/20 bg-primary-container">
+        <div class="flex items-center gap-4">
+            <img alt="Logo Creadent" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ">
+            <span class="font-display-lg text-headline-md font-bold text-white hidden lg:block">Creadent</span>
+        </div>
+        
+        <div class="hidden md:flex items-center gap-8 font-body-md text-body-md">
+            <a class="text-white hover:text-primary-fixed transition-colors" href="index.html">Inicio</a>
+            
+            <div class="relative group">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-2 font-body-md text-body-md" href="marco-teorico.html">
+                    Marco Teórico 
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 dropdown-animate pointer-events-none group-hover:pointer-events-auto border border-outline-variant/30 z-50">
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#introduccion">Introducción</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#antecedentes">Antecedentes</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#problema">Planteamiento del Problema</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#arbol">Árbol de problema</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#formulacion">Formulación del problema</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#proposito">Propósito del estudio</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#metodologia">Metodología</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#planificacion">Planificación de actividades</a>
+                </div>
+            </div>
+            
+            <div class="relative group">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-2 font-body-md text-body-md" href="analisis-estructurado.html">
+                    Análisis Estructurado 
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 dropdown-animate pointer-events-none group-hover:pointer-events-auto border border-outline-variant/30 z-50">
+                    <div class="px-6 py-1.5 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo Ambiental</div>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#proposito">Declaración de Propósitos</a>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#contexto">Diagrama de Contexto</a>
+                    
+                    <div class="px-6 py-1.5 mt-2 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo de Comportamiento</div>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#dfd">DFD por Niveles</a>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#der">DER</a>
+                </div>
+            </div>
+            
+            <a class="text-white hover:text-primary-fixed transition-colors" href="orientado-a-objetos.html">Orientado A Objetos</a>
+            <a class="text-white hover:text-primary-fixed transition-colors" href="video.html">Videos</a>
+            <a class="text-white font-bold border-b-2 border-white pb-1" href="contactos.html">Contactos</a>
+        </div>
+        
+        <div class="flex items-center gap-4">
+            <button class="hidden lg:flex border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-primary transition-all active:scale-95 shadow-md">Agendar Cita</button>
+            <button id="menu-open-btn" class="md:hidden text-white"><span class="material-symbols-outlined text-2xl">menu</span></button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
+        <div id="mobile-menu-content" class="absolute top-0 right-0 w-[280px] h-full bg-white p-6 shadow-2xl flex flex-col justify-between translate-x-full transition-transform duration-300 rounded-l-3xl">
+            <div>
+                <div class="flex justify-between items-center mb-8">
+                    <span class="font-display-lg text-xl font-bold text-primary">Menú</span>
+                    <button id="menu-close-btn" class="text-primary p-1 hover:bg-surface-container rounded-full transition-colors">
+                        <span class="material-symbols-outlined text-2xl">close</span>
+                    </button>
+                </div>
+                <div class="flex flex-col gap-4 text-body-md">
+                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="index.html">Inicio</a>
+                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="marco-teorico.html">Marco Teórico</a>
+                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="analisis-estructurado.html">Análisis Estructurado</a>
+                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="orientado-a-objetos.html">Orientado A Objetos</a>
+                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="video.html">Videos</a>
+                    <a class="text-primary font-bold py-2 border-b border-primary/30" href="contactos.html">Contactos</a>
+                </div>
+            </div>
+            <button class="w-full bg-primary text-white py-3 rounded-full font-bold hover:bg-primary-container transition-all active:scale-95 shadow-md">
+                Agendar Cita
+            </button>
+        </div>
+    </div>
+
+    <main class="pt-16">
+        <section class="max-w-container-max mx-auto px-margin-desktop pt-24 pb-16">
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="font-label-caps text-label-caps text-on-primary-container uppercase tracking-widest mb-4 block">Hablemos de su salud dental</span>
+                <h1 class="font-display-lg text-display-lg text-primary mb-6">Contáctenos</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">Estamos aquí para resolver sus dudas y coordinar su próxima visita a nuestra clínica en La Paz.</p>
+            </div>
+        </section>
+        
+        <section class="max-w-container-max mx-auto px-margin-desktop pb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <div class="lg:col-span-7 bg-surface-container-lowest rounded-3xl p-8 md:p-12 shadow-[0_40px_40px_-20px_rgba(0,51,85,0.04)] border border-surface-container">
+                    <h2 class="font-headline-md text-headline-md text-primary mb-8">Envíenos un mensaje</h2>
+                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('Mensaje enviado. Nos pondremos en contacto pronto.');">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="font-label-caps text-label-caps text-on-surface-variant uppercase ml-1">Nombre Completo</label>
+                                <input class="w-full bg-surface-chalk border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-container form-focus-glow transition-all" placeholder="Ej. Juan Pérez" type="text"/>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-caps text-label-caps text-on-surface-variant uppercase ml-1">Correo Electrónico</label>
+                                <input class="w-full bg-surface-chalk border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-container form-focus-glow transition-all" placeholder="juan@ejemplo.com" type="email"/>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="font-label-caps text-label-caps text-on-surface-variant uppercase ml-1">Servicio de Interés</label>
+                            <select class="w-full bg-surface-chalk border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-container form-focus-glow transition-all appearance-none">
+                                <option>Ortodoncia</option>
+                                <option>Implantología Oral</option>
+                                <option>Estética Dental</option>
+                                <option>Consulta General</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="font-label-caps text-label-caps text-on-surface-variant uppercase ml-1">Mensaje</label>
+                            <textarea class="w-full bg-surface-chalk border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-container form-focus-glow transition-all" placeholder="¿Cómo podemos ayudarle?" rows="4"></textarea>
+                        </div>
+                        <button class="w-full md:w-auto bg-primary text-on-primary font-label-caps text-label-caps px-10 py-4 rounded-full hover:bg-primary-container transition-all flex items-center justify-center gap-2" type="submit">
+                            Enviar Mensaje
+                            <span class="material-symbols-outlined text-[18px]">send</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="lg:col-span-5 flex flex-col gap-8">
+                    <div class="bg-primary text-on-primary rounded-3xl p-8 flex-1">
+                        <h3 class="font-headline-md text-headline-md mb-6">Datos de Contacto</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary-container p-3 rounded-full flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">call</span>
+                                </div>
+                                <div>
+                                    <p class="font-label-caps text-label-caps opacity-60 uppercase mb-1">Teléfono</p>
+                                    <a class="font-body-lg text-body-lg hover:underline transition-all" href="tel:+59169987205">+591 69987205</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary-container p-3 rounded-full flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">mail</span>
+                                </div>
+                                <div>
+                                    <p class="font-label-caps text-label-caps opacity-60 uppercase mb-1">Correo Electrónico</p>
+                                    <a class="font-body-lg text-body-lg hover:underline transition-all" href="mailto:luque2219@gmail.com">luque2219@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary-container p-3 rounded-full flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">emergency</span>
+                                </div>
+                                <div>
+                                    <p class="font-label-caps text-label-caps opacity-60 uppercase mb-1">Urgencias 24/7</p>
+                                    <p class="font-body-lg text-body-lg">Atención Inmediata</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-surface-container rounded-3xl p-8 border border-outline-variant">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-2">
+                            <span class="material-symbols-outlined">schedule</span>
+                            Horarios
+                        </h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center border-b border-outline-variant pb-2">
+                                <span class="font-body-md text-on-surface-variant">Lunes - Viernes</span>
+                                <span class="font-body-md font-bold text-primary">09:00 - 19:00</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b border-outline-variant pb-2">
+                                <span class="font-body-md text-on-surface-variant">Sábado</span>
+                                <span class="font-body-md font-bold text-primary">09:00 - 13:00</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-body-md text-on-surface-variant">Domingo</span>
+                                <span class="text-error font-semibold">Cerrado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="max-w-container-max mx-auto px-margin-desktop pb-24">
+            <div class="text-center mb-12">
+                <h2 class="font-display-lg text-headline-md md:text-display-lg text-primary mb-4">Preguntas Frecuentes para tu Visita</h2>
+                <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Resolvemos tus dudas principales para que tu experiencia en Creadent sea cómoda y transparente.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-surface-container-lowest p-8 rounded-3xl border border-surface-container shadow-[0_40px_40px_-20px_rgba(0,51,85,0.04)] transition-all hover:scale-105 duration-300">
+                    <div class="bg-primary-container w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-on-primary-container">assignment_ind</span>
+                    </div>
+                    <h3 class="font-headline-md text-xl text-primary mb-4">¿Qué debo traer a mi primera cita?</h3>
+                    <p class="font-body-md text-on-surface-variant">Solo tu identificación y cualquier radiografía previa que tengas.</p>
+                </div>
+                <div class="bg-surface-container-lowest p-8 rounded-3xl border border-surface-container shadow-[0_40px_40px_-20px_rgba(0,51,85,0.04)] transition-all hover:scale-105 duration-300">
+                    <div class="bg-primary-container w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-on-primary-container">payments</span>
+                    </div>
+                    <h3 class="font-headline-md text-xl text-primary mb-4">¿Ofrecen financiamiento?</h3>
+                    <p class="font-body-md text-on-surface-variant">Sí, contamos con planes de pago personalizados para ortodoncia e implantes.</p>
+                </div>
+                <div class="bg-surface-container-lowest p-8 rounded-3xl border border-surface-container shadow-[0_40px_40px_-20px_rgba(0,51,85,0.04)] transition-all hover:scale-105 duration-300">
+                    <div class="bg-primary-container w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-on-primary-container">emergency</span>
+                    </div>
+                    <h3 class="font-headline-md text-xl text-primary mb-4">¿Atienden emergencias?</h3>
+                    <p class="font-body-md text-on-surface-variant">Contamos con atención prioritaria para casos de dolor agudo o trauma.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="max-w-container-max mx-auto px-margin-desktop pb-24">
+        <div class="text-center mb-12">
+            <h2 class="font-display-lg text-headline-md md:text-display-lg text-primary mb-4">Nuestro Liderazgo Visionario</h2>
+            <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Los rostros detrás de la excelencia dental en Creadent.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-surface-container-lowest p-8 rounded-3xl border border-surface-container shadow-[0_40px_40px_-20px_rgba(0,51,85,0.04)] text-center group hover:scale-105 transition-all duration-300">
+                <div class="w-24 h-24 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-6 text-on-primary-container">
+                    <span class="material-symbols-outlined text-4xl">person</span>
+                </div>
+                <h3 class="font-headline-md text-xl text-primary mb-1">Dr. Carlos Mendoza Arze</h3>
+                <p class="font-label-caps text-label-caps text-primary/70 uppercase mb-4">Socio Fundador & Director Clínico</p>
+                <p class="font-body-md text-on-surface-variant">Dedicado a transformar sonrisas con la tecnología más avanzada del país.</p>
+            </div>
+            <div class="bg-surface-container-lowest p-8 rounded-3xl border border-surface-container shadow-[0_40px_40px_-20px_rgba(0,51,85,0.04)] text-center group hover:scale-105 transition-all duration-300">
+                <div class="w-24 h-24 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-6 text-on-primary-container">
+                    <span class="material-symbols-outlined text-4xl">person</span>
+                </div>
+                <h3 class="font-headline-md text-xl text-primary mb-1">Dra. Elena Vargas Llosa</h3>
+                <p class="font-label-caps text-label-caps text-primary/70 uppercase mb-4">Co-Fundadora & Especialista Senior</p>
+                <p class="font-body-md text-on-surface-variant">Liderando la innovación en estética dental con un enfoque humano y preciso.</p>
+            </div>
+            <div class="bg-surface-container-lowest p-8 rounded-3xl border border-surface-container shadow-[0_40px_40px_-20px_rgba(0,51,85,0.04)] text-center group hover:scale-105 transition-all duration-300">
+                <div class="w-24 h-24 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-6 text-on-primary-container">
+                    <span class="material-symbols-outlined text-4xl">person</span>
+                </div>
+                <h3 class="font-headline-md text-xl text-primary mb-1">Dr. Roberto Salas Quiroga</h3>
+                <p class="font-label-caps text-label-caps text-primary/70 uppercase mb-4">Director de Implantología</p>
+                <p class="font-body-md text-on-surface-variant">Comprometido con la restauración funcional y la salud integral de cada paciente.</p>
+            </div>
+            <div class="bg-surface-container-lowest p-8 rounded-3xl border border-surface-container shadow-[0_40px_40px_-20px_rgba(0,51,85,0.04)] text-center group hover:scale-105 transition-all duration-300">
+                <div class="w-24 h-24 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-6 text-on-primary-container">
+                    <span class="material-symbols-outlined text-4xl">person</span>
+                </div>
+                <h3 class="font-headline-md text-xl text-primary mb-1">Dra. Marina Blanco Peñaranda</h3>
+                <p class="font-label-caps text-label-caps text-primary/70 uppercase mb-4">Directora de Ortodoncia</p>
+                <p class="font-body-md text-on-surface-variant">Visionaria en el diseño de sonrisas perfectas mediante ortodoncia invisible.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-surface-container dark:bg-surface-dim w-full py-12 border-t border-outline-variant">
+        <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-4">
+                <span class="font-display-lg text-headline-md font-bold text-primary dark:text-primary-fixed">Creadent</span>
+                <p class="font-body-md text-on-surface-variant pr-8">Innovación en ortodoncia e implantología oral con los más altos estándares de calidad y ética profesional.</p>
+            </div>
+            <div class="space-y-4">
+                <h5 class="font-label-caps text-label-caps text-primary uppercase font-bold">Enlaces Rápidos</h5>
+                <ul class="space-y-2">
+                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Facebook</a></li>
+                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Instagram</a></li>
+                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="space-y-4">
+                <h5 class="font-label-caps text-label-caps text-primary uppercase font-bold">Legal</h5>
+                <ul class="space-y-2">
+                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Privacidad</a></li>
+                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Términos</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-desktop mt-12 pt-8 border-t border-outline-variant/30 text-center">
+            <p class="font-body-md text-on-surface-variant opacity-70">© 2024 Creadent Ortodoncia & Implantología Oral. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <button class="fixed bottom-8 right-8 bg-primary text-on-primary w-12 h-12 rounded-full shadow-lg items-center justify-center transition-all opacity-0 pointer-events-none hover:scale-110 active:scale-90 z-40 flex" id="back-to-top">
+        <span class="material-symbols-outlined">north</span>
+    </button>
+
+    <script>
+        // Lógica del Menú Móvil (Drawer)
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuContent = document.getElementById('mobile-menu-content');
+        const menuOpenBtn = document.getElementById('menu-open-btn');
+        const menuCloseBtn = document.getElementById('menu-close-btn');
+
+        function openMenu() {
+            mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+            mobileMenuContent.classList.remove('translate-x-full');
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+            mobileMenuContent.classList.add('translate-x-full');
+        }
+
+        if (menuOpenBtn) menuOpenBtn.addEventListener('click', openMenu);
+        if (menuCloseBtn) menuCloseBtn.addEventListener('click', closeMenu);
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) closeMenu();
+        });
+
+        // Botón Back to Top y Visibilidad
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                backToTop.classList.add('opacity-0', 'pointer-events-none');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html><html class="light" lang="es" style=""><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Análisis Estructurado | Creadent</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-tertiary-container": "#c98b5d",
+                "primary-container": "#003355",
+                "on-tertiary-fixed-variant": "#6a3b14",
+                "error": "#ba1a1a",
+                "on-tertiary": "#ffffff",
+                "on-background": "#1b1c1c",
+                "secondary": "#5c5f61",
+                "surface-container-high": "#eae7e7",
+                "on-primary-fixed-variant": "#21496d",
+                "on-secondary": "#ffffff",
+                "background": "#fcf9f8",
+                "on-error-container": "#93000a",
+                "surface-container": "#f0eded",
+                "outline": "#73777f",
+                "secondary-fixed": "#e0e3e5",
+                "primary": "#001d34",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-container": "#4f2601",
+                "on-tertiary-fixed": "#301400",
+                "surface-tint": "#3b6186",
+                "inverse-surface": "#303030",
+                "secondary-fixed-dim": "#c4c7c9",
+                "tertiary-fixed": "#ffdcc5",
+                "on-primary-container": "#769cc3",
+                "tertiary-fixed-dim": "#fcb886",
+                "primary-fixed-dim": "#a4caf4",
+                "surface-chalk": "#F8F8F8",
+                "inverse-on-surface": "#f3f0ef",
+                "surface-dim": "#dcd9d9",
+                "on-primary": "#ffffff",
+                "on-surface": "#1b1c1c",
+                "error-container": "#ffdad6",
+                "tertiary": "#301500",
+                "surface-bright": "#fcf9f8",
+                "surface-container-low": "#f6f3f2",
+                "surface-container-highest": "#e5e2e1",
+                "on-primary-fixed": "#001d34",
+                "on-secondary-container": "#626567",
+                "surface": "#fcf9f8",
+                "inverse-primary": "#a4caf4",
+                "outline-variant": "#c2c7cf",
+                "primary-fixed": "#cfe5ff",
+                "on-secondary-fixed": "#191c1e",
+                "glass-border": "rgba(255, 255, 255, 0.2)",
+                "glass-fill": "rgba(255, 255, 255, 0.7)",
+                "surface-variant": "#e5e2e1",
+                "secondary-container": "#e0e3e5",
+                "on-error": "#ffffff",
+                "on-surface-variant": "#42474e",
+                "on-secondary-fixed-variant": "#444749"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "margin-mobile": "20px",
+                "container-max": "1280px",
+                "margin-desktop": "64px",
+                "gutter": "24px",
+                "baseline": "8px"
+            },
+            "fontFamily": {
+                "label-caps": ["Inter"],
+                "headline-md": ["Plus Jakarta Sans"],
+                "display-lg": ["Plus Jakarta Sans"],
+                "body-md": ["Inter"],
+                "display-lg-mobile": ["Plus Jakarta Sans"],
+                "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "body-lg": ["18px", {"lineHeight": "1.8", "fontWeight": "400"}]
+            }
+        },
+    },
+}
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 40px 40px -10px rgba(0, 29, 52, 0.04);
+}
+.nav-blur {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+</style>
+</head>
+<body class="bg-surface-chalk text-on-surface font-body-md selection:bg-primary-fixed-dim">
+    <!-- Header Navigation -->
+    <nav class="sticky top-4 mx-auto w-[95%] max-w-container-max rounded-full z-50 flex justify-between items-center px-gutter py-3 shadow-xl border border-primary/20 bg-primary-container">
+        <div class="flex items-center gap-4">
+            <img alt="Logo Creadent" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ">
+            <span class="font-display-lg text-headline-md font-bold text-white hidden lg:block">Creadent</span>
+        </div>
+        <div class="hidden md:flex items-center gap-8 font-body-md text-body-md">
+            <a class="text-white hover:text-primary-fixed transition-colors" href="index.html">Inicio</a>
+            
+            <div class="relative group">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-2" href="marco-teorico.html">
+                    Marco Teorico <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+                </a>
+                <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 transition-all duration-300 origin-top pointer-events-none border border-outline-variant/30 group-hover:opacity-100 group-hover:scale-y-100 group-hover:pointer-events-auto">
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#introduccion">Introduccion</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#antecedentes">Antecedentes</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#planteamiento">Planteamiento del Problema</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#arbol">Arbol de problema</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#formulacion">Formulacion del problema</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#proposito">Proposito del estudio</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#metodologia">Metodologia</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#cronograma">Planificacion de actividades</a>
+                </div>
+            </div>
+            
+            <!-- MENÚ DESPLEGABLE EN analisis-estrcuturado.html -->
+            <div class="relative group">
+                <a class="flex items-center gap-1 text-primary-fixed font-bold border-b-2 border-primary-fixed transition-colors py-2" href="analisis-estrcuturado.html">
+                    Análisis Estructurado <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+                </a>
+                <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 transition-all duration-300 origin-top pointer-events-none border border-outline-variant/30 group-hover:opacity-100 group-hover:scale-y-100 group-hover:pointer-events-auto">
+                    
+                    <div class="px-6 py-2 text-label-caps text-primary/50">Modelo Ambiental</div>
+                    <!-- Enlaces directos a las secciones de Modelo Ambiental -->
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#propositos">Declaracion de Propositos</a>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#contexto">Diagrama de Contexto</a>
+                    
+                    <div class="px-6 py-2 mt-2 text-label-caps text-primary/50">Modelo de Comportamiento</div>
+                    <!-- Enlaces directos a las secciones de Modelo de Comportamiento -->
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#dfd">DFD por Niveles</a>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#der">DER</a>
+                </div>
+            </div>
+            
+            <a class="text-white hover:text-primary-fixed transition-colors" href="orientado-a-objetos.html">Orientado A Objetos</a>
+            <a class="text-white hover:text-primary-fixed transition-colors" href="video.html">Videos</a>
+            <a class="text-white hover:text-primary-fixed transition-colors" href="contactos.html">Contactos</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="hidden lg:flex border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-primary transition-all active:scale-95 shadow-md">Agendar Cita</button>
+            <button class="md:hidden text-white"><span class="material-symbols-outlined text-2xl">menu</span></button>
+        </div>
+    </nav>
+    <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <!-- Hero Section -->
+        <header class="pt-24 pb-16 text-center max-w-3xl mx-auto">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed mb-6">
+                <span class="material-symbols-outlined text-[18px]">engineering</span>
+                <span class="font-label-caps text-label-caps uppercase">Documentación Técnica</span>
+            </div>
+            <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Análisis Estructurado</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">
+                Exploración detallada de la arquitectura lógica y el modelado técnico que fundamentan el sistema integral de gestión clínica Creadent, garantizando precisión en el flujo de datos.
+            </p>
+        </header>
+        <!-- Feature Cards / Bento Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-24">
+            <!-- Card 1: Modelo Ambiental -->
+            <a class="glass-card p-8 rounded-xl group hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between border border-transparent hover:border-primary-container" href="{{DATA:SCREEN:SCREEN_4}}" style="transform: translateY(0px);">
+                <div>
+                    <div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                        <span class="material-symbols-outlined text-[32px]">public</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-3">Modelo Ambiental</h3>
+                    <p class="text-on-surface-variant text-body-md mb-6">
+                        Define los límites precisos del sistema y su interacción con entidades externas, capturando el contexto operativo de la clínica.
+                    </p>
+                </div>
+                <div class="flex items-center text-primary font-bold gap-2 group-hover:gap-4 transition-all">
+                    <span class="">Ver Detalles</span>
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </div>
+            </a>
+            <!-- Card 2: Modelo de Comportamiento -->
+            <div class="bg-white p-8 rounded-xl shadow-[0_40px_40px_-10px_rgba(0,29,52,0.04)] hover:-translate-y-2 transition-all duration-300 flex flex-col border border-transparent hover:border-primary-container">
+                <div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center mb-6 text-primary">
+                    <span class="material-symbols-outlined text-[32px]">schema</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-3">Modelo de Comportamiento</h3>
+                <p class="text-on-surface-variant text-body-md mb-4">
+                    Visualización de la lógica interna mediante Diagramas de Flujo de Datos (DFD) y Modelado Entidad-Relación (ER) para la integridad de la base de datos.
+                </p>
+                <div class="mt-auto flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-surface-container rounded-full text-[12px] font-label-caps text-on-surface-variant">Diagramas DFD</span>
+                    <span class="px-3 py-1 bg-surface-container rounded-full text-[12px] font-label-caps text-on-surface-variant">Entidad-Relación</span>
+                </div>
+            </div>
+            <!-- Card 3: Procesos y Flujos -->
+            <div class="bg-white p-8 rounded-xl shadow-[0_40px_40px_-10px_rgba(0,29,52,0.04)] hover:-translate-y-2 transition-all duration-300 flex flex-col border border-transparent hover:border-primary-container">
+                <div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center mb-6 text-primary">
+                    <span class="material-symbols-outlined text-[32px]">account_tree</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-3">Procesos y Flujos</h3>
+                <p class="text-on-surface-variant text-body-md mb-4">
+                    Análisis exhaustivo del movimiento de la información desde la admisión del paciente hasta el historial clínico y facturación.
+                </p>
+                <div class="mt-auto flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-surface-container rounded-full text-[12px] font-label-caps text-on-surface-variant">Lógica de Negocio</span>
+                    <span class="px-3 py-1 bg-surface-container rounded-full text-[12px] font-label-caps text-on-surface-variant">Pipeline de Datos</span>
+                </div>
+            </div>
+        </section>
+        <!-- Information Section: Methodology -->
+        <section class="mb-32 relative overflow-hidden rounded-3xl bg-primary-container text-on-primary">
+            <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+                <!-- Abstract Pattern Replacement -->
+                <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;"></div>
+            </div>
+            <div class="relative z-10 p-8 md:p-16 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-display-lg text-display-lg-mobile md:text-headline-md text-on-primary-container mb-6">Metodología Yourdon/DeMarco</h2>
+                    <p class="font-body-lg text-body-lg mb-8 opacity-90">
+                        Implementamos el enfoque clásico del análisis estructurado para desglosar la complejidad del sistema Creadent en componentes manejables y lógicos.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-on-primary-container">check_circle</span>
+                            <span class="">Participación activa del usuario en la validación de diagramas.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-on-primary-container">check_circle</span>
+                            <span class="">Minimización de redundancia mediante la normalización de datos.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-on-primary-container">check_circle</span>
+                            <span class="">Modelado gráfico de fácil interpretación técnica.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aspect-video rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 p-6 flex items-center justify-center">
+                    <div class="text-center">
+                        <span class="material-symbols-outlined text-[80px] text-on-primary-container mb-4">settings_suggest</span>
+                        <div class="font-label-caps text-label-caps uppercase tracking-widest opacity-60">Arquitectura de Software</div>
+                        <div class="font-headline-md text-headline-md mt-2">Modelo Lógico de Creadent</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Visual Content Grid -->
+        <section class="mb-32">
+            <div class="text-center mb-16">
+                <h2 class="font-headline-md text-headline-md text-primary mb-4">Integridad y Precisión Clínica</h2>
+                <p class="max-w-2xl mx-auto text-on-surface-variant">Cada módulo ha sido diseñado para cumplir con los estándares médicos más exigentes, garantizando que la información del paciente sea el núcleo de cada proceso.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="flex gap-6 items-start">
+                    <div class="bg-primary p-4 rounded-xl text-on-primary shrink-0">
+                        <span class="material-symbols-outlined">verified_user</span>
+                    </div>
+                    <div>
+                        <h4 class="font-headline-md text-[20px] text-primary mb-2">Diccionario de Datos</h4>
+                        <p class="text-on-surface-variant">Un repositorio centralizado que define cada término y formato utilizado en el sistema para evitar ambigüedades en el registro médico.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 items-start">
+                    <div class="bg-primary p-4 rounded-xl text-on-primary shrink-0">
+                        <span class="material-symbols-outlined">analytics</span>
+                    </div>
+                    <div>
+                        <h4 class="font-headline-md text-[20px] text-primary mb-2">Análisis de Requerimientos</h4>
+                        <p class="text-on-surface-variant">Traducción de las necesidades operativas de la clínica dental en especificaciones técnicas de alto rendimiento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container dark:bg-surface-dim border-t border-outline-variant w-full py-12">
+        <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <img alt="Logo Footer" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ">
+                    <span class="font-display-lg text-headline-md font-bold text-primary">Creadent</span>
+                </div>
+                <p class="text-on-surface-variant text-body-md pr-8">
+                    Innovación en ortodoncia e implantología oral, combinando tecnología avanzada con el análisis estructurado de procesos.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex flex-col gap-3">
+                    <span class="font-label-caps text-label-caps text-primary uppercase mb-2">Legal</span>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Privacidad</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Términos</a>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <span class="font-label-caps text-label-caps text-primary uppercase mb-2">Social</span>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Facebook</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Instagram</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">LinkedIn</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4">
+                <span class="font-label-caps text-label-caps text-primary uppercase mb-2">Suscríbete</span>
+                <div class="flex gap-2 p-1 bg-surface rounded-full border border-outline-variant focus-within:border-primary transition-all">
+                    <input class="bg-transparent border-none focus:ring-0 px-4 py-2 flex-grow text-body-md" placeholder="Email" type="email">
+                    <button class="bg-primary text-on-primary rounded-full p-2 flex items-center justify-center">
+                        <span class="material-symbols-outlined">send</span>
+                    </button>
+                </div>
+                <p class="text-[12px] text-on-surface-variant">© 2024 Creadent Ortodoncia &amp; Implantologia Oral. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Micro-interactions
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-8px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+
+
+</body></html>

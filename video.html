@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Creadent | Galería Multimedia</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;600;700;800&family=Inter:wght=400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-primary": "#ffffff",
+                "on-secondary": "#ffffff",
+                "surface-chalk": "#F8F8F8",
+                "inverse-primary": "#a4caf4",
+                "surface-container-low": "#f6f3f2",
+                "primary": "#001d34",
+                "background": "#fcf9f8",
+                "outline": "#73777f",
+                "on-primary-fixed": "#001d34",
+                "on-primary-container": "#769cc3",
+                "surface-container": "#f0eded",
+                "glass-border": "rgba(255, 255, 255, 0.2)",
+                "glass-fill": "rgba(255, 255, 255, 0.7)",
+                "surface-dim": "#dcd9d9",
+                "tertiary-container": "#4f2601",
+                "error": "#ba1a1a",
+                "tertiary": "#301500",
+                "on-surface": "#1b1c1c",
+                "surface-tint": "#3b6186",
+                "on-tertiary-fixed": "#301400",
+                "surface": "#fcf9f8",
+                "secondary": "#5c5f61",
+                "on-surface-variant": "#42474e",
+                "on-error-container": "#93000a",
+                "surface-container-highest": "#e5e2e1",
+                "on-primary-fixed-variant": "#21496d",
+                "secondary-fixed-dim": "#c4c7c9",
+                "tertiary-fixed": "#ffdcc5",
+                "on-tertiary": "#ffffff",
+                "tertiary-fixed-dim": "#fcb886",
+                "on-secondary-fixed": "#191c1e",
+                "inverse-on-surface": "#f3f0ef",
+                "surface-variant": "#e5e2e1",
+                "on-secondary-fixed-variant": "#444749",
+                "on-tertiary-fixed-variant": "#6a3b14",
+                "surface-container-lowest": "#ffffff",
+                "secondary-fixed": "#e0e3e5",
+                "primary-fixed": "#cfe5ff",
+                "inverse-surface": "#303030",
+                "on-background": "#1b1c1c",
+                "secondary-container": "#e0e3e5",
+                "on-secondary-container": "#626567",
+                "on-tertiary-container": "#c98b5d",
+                "on-error": "#ffffff",
+                "error-container": "#ffdad6",
+                "primary-fixed-dim": "#a4caf4",
+                "surface-bright": "#fcf9f8",
+                "surface-container-high": "#eae7e7",
+                "primary-container": "#003355",
+                "outline-variant": "#c2c7cf"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "margin-desktop": "64px",
+                "margin-mobile": "20px",
+                "gutter": "24px",
+                "container-max": "1280px",
+                "baseline": "8px"
+            },
+            // REEMPLAZA ESTA PARTE DENTRO DE TAILWIND.CONFIG -> EXTEND:
+            "fontFamily": {
+                "sans": ["Inter", "sans-serif"],
+                "display": ["Plus Jakarta Sans", "sans-serif"],
+                "body-lg": ["Inter", "sans-serif"],
+                "label-caps": ["Inter", "sans-serif"],
+                "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+                "display-lg-mobile": ["Plus Jakarta Sans", "sans-serif"],
+                "body-md": ["Inter", "sans-serif"],
+                "display-lg": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            "fontSize": {
+                "body-lg": ["18px", {"lineHeight": "1.8", "fontWeight": "400"}],
+                "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+        },
+    },
+}
+</script>
+<style>
+    .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .video-overlay-gradient {
+        background: linear-gradient(0deg, rgba(0,29,52,0.8) 0%, rgba(0,29,52,0) 60%);
+    }
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Transición suave para los menús desplegables nativos de Tailwind */
+    .dropdown-animate {
+        transition: all 0.2s ease-in-out;
+        transform-origin: top;
+    }
+</style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased pt-6">
+
+    <nav class="sticky top-4 mx-auto w-[95%] max-w-container-max rounded-full z-50 flex justify-between items-center px-gutter py-3 shadow-xl border border-primary/20 bg-primary-container">
+        <div class="flex items-center gap-4">
+            <img alt="Logo Creadent" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ">
+            <span class="font-display-lg text-headline-md font-bold text-white hidden lg:block">Creadent</span>
+        </div>
+        
+        <div class="hidden md:flex items-center gap-8 font-body-md text-body-md">
+            <a class="text-white hover:text-primary-fixed transition-colors" href="index.html">Inicio</a>
+            
+            <div class="relative group">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-2 font-body-md text-body-md" href="marco-teorico.html">
+                    Marco Teórico 
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 pointer-events-none group-hover:opacity-100 group-hover:scale-y-100 group-hover:pointer-events-auto dropdown-animate border border-outline-variant/30 z-50">
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#introduccion">Introducción</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#antecedentes">Antecedentes</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#problema">Planteamiento del Problema</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#arbol">Árbol de problema</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#formulacion">Formulación del problema</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#proposito">Propósito del estudio</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#metodologia">Metodología</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#planificacion">Planificación de actividades</a>
+                </div>
+            </div>
+            
+            <div class="relative group">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-2 font-body-md text-body-md" href="analisis-estructurado.html">
+                    Análisis Estructurado 
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 pointer-events-none group-hover:opacity-100 group-hover:scale-y-100 group-hover:pointer-events-auto dropdown-animate border border-outline-variant/30 z-50">
+                    <div class="px-6 py-1.5 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo Ambiental</div>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#proposito">Declaración de Propósitos</a>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#contexto">Diagrama de Contexto</a>
+                    
+                    <div class="px-6 py-1.5 mt-2 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo de Comportamiento</div>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#dfd">DFD por Niveles</a>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#der">DER</a>
+                </div>
+            </div>
+            
+            <a class="text-white hover:text-primary-fixed transition-colors" href="orientado-a-objetos.html">Orientado A Objetos</a>
+            <a class="text-white font-bold border-b-2 border-white pb-1" href="video.html">Videos</a>
+            <a class="text-white hover:text-primary-fixed transition-colors" href="contactos.html">Contactos</a>
+        </div>
+        
+        <div class="flex items-center gap-4">
+            <button class="hidden lg:flex border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-primary transition-all active:scale-95 shadow-md">Agendar Cita</button>
+            <button id="menu-btn" class="md:hidden text-white"><span class="material-symbols-outlined text-2xl">menu</span></button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-y-0 right-0 w-64 bg-primary-container border-l border-white/10 z-50 transform translate-x-full transition-transform duration-300 md:hidden p-6 flex flex-col gap-6">
+      <div class="flex justify-end">
+        <button id="close-btn" class="text-white focus:outline-none">
+          <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+  </div>
+  <nav class="flex flex-col gap-4 text-white font-headline-md font-semibold">
+    <a class="hover:text-primary-fixed transition-colors" href="index.html">Inicio</a>
+    <a class="hover:text-primary-fixed transition-colors" href="marco-teorico.html">Marco Teórico</a>
+    <a class="hover:text-primary-fixed transition-colors" href="modelo-ambiental.html">Modelo Ambiental</a>
+    <a class="hover:text-primary-fixed transition-colors" href="modelo-de-comportamiento.html">Modelo de Comportamiento</a>
+    <a class="hover:text-primary-fixed transition-colors" href="orientado-a-objetos.html">Orientado a Objetos</a>
+    <a class="text-primary-fixed border-l-2 border-white pl-2 font-bold" href="video.html">Videos</a>
+    <a class="hover:text-primary-fixed transition-colors" href="contactos.html">Contactos</a>
+</nav>
+</div>
+
+<main>
+    <section class="relative pt-24 pb-32 overflow-hidden">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+            <div class="max-w-2xl">
+                <span class="font-label-caps text-label-caps text-on-primary-container uppercase tracking-widest mb-4 block">Innovación Clínica</span>
+                <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Galería Multimedia</h1>
+                <p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                    Explora el futuro de la odontología a través de nuestra selección de videos. Desde procedimientos de vanguardia hasta historias reales de transformación, descubre por qué la educación del paciente es el corazón de nuestra excelencia clínica.
+                </p>
+            </div>
+        </div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-fixed opacity-10 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 -left-48 w-[600px] h-[600px] bg-secondary-fixed-dim opacity-5 rounded-full blur-[100px]"></div>
+    </section>
+
+    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-12">
+        <div class="flex flex-wrap gap-4 items-center border-b border-outline-variant pb-6">
+            <button class="px-5 py-2 rounded-full bg-primary text-on-primary font-label-caps text-label-caps">Todos</button>
+            <button class="px-5 py-2 rounded-full border border-outline-variant text-secondary hover:bg-surface-container transition-colors font-label-caps text-label-caps">Procedimientos</button>
+            <button class="px-5 py-2 rounded-full border border-outline-variant text-secondary hover:bg-surface-container transition-colors font-label-caps text-label-caps">Tecnología</button>
+            <button class="px-5 py-2 rounded-full border border-outline-variant text-secondary hover:bg-surface-container transition-colors font-label-caps text-label-caps">Testimonios</button>
+            <button class="px-5 py-2 rounded-full border border-outline-variant text-secondary hover:bg-surface-container transition-colors font-label-caps text-label-caps">Tours</button>
+        </div>
+    </section>
+
+    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-24">
+        <div class="flex flex-col gap-8">
+            <h2 class="font-headline-md text-headline-md text-primary">Video Destacado: Innovación en Creadent</h2>
+            <div class="relative aspect-video rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE6xbJ1cuAi9ngDn7l1GtAQq-CjoPQo-wEYPZtjaY2KBNiSQDfOkNetDgXD04VzNkJFax16KemdUmCRGpD0WAah_nptO5wBxpuLcrifXdiyIyWSKEITTo4ToqZJV1Qe_oIt-54uCfTQVKhkIGBNlsWfKyibUDa0pitlGVFPXdiEgFdj0SPh3U90mQKlU2l1q4XXG8yr_ULDToOw4D3oUtVQnUTL1zx_kjm1lAuT1GSiZBD-Bqsz4eZ8A8mrK-DZSilkv5C_eR66kad" alt="Innovación en Creadent" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+                    <div class="w-24 h-24 bg-white/30 backdrop-blur-lg border border-white/40 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <span class="material-symbols-outlined text-white text-6xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+            <div class="group cursor-pointer">
+                <div class="relative aspect-video rounded-xl overflow-hidden mb-6 shadow-[0_40px_40px_-15px_rgba(0,0,0,0.04)] bg-surface-container transition-all duration-300 group-hover:shadow-[0_40px_40px_-10px_rgba(0,0,0,0.1)]">
+                    <img alt="Ortodoncia Avanzada" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN1nPagRSKu9Sp8lr1lkqCNXnbIR_nXQmAZdBtN9rZ98OFN18dX0dk6i8IZPasW49D4Yht0iW1B3QMz5-My44Ac5V5qXvrzR9uzkRpR_y1KdnEdfAwf8IQEpU1-pi5hC8-VcSNSKhs7NZ4MyzkOzIaG3SoqIMaTfDGKtBvLAMkC1PRarUBje2l4ajQGTRNDongiHA8DetRvXvp-3g0L0m4dcHRWjYBOJ161vpBunx0xpmHK7F9uf1ufBNlGrjScNtF7BIiNC_84rfi">
+                    <div class="absolute inset-0 video-overlay-gradient flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity">
+                        <div class="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">Ortodoncia Avanzada</h3>
+                <p class="font-body-md text-body-md text-secondary">Descubra cómo nuestras técnicas invisibles están redefiniendo la estética dental moderna con precisión digital.</p>
+            </div>
+            
+            <div class="group cursor-pointer">
+                <div class="relative aspect-video rounded-xl overflow-hidden mb-6 shadow-[0_40px_40px_-15px_rgba(0,0,0,0.04)] bg-surface-container transition-all duration-300 group-hover:shadow-[0_40px_40px_-10px_rgba(0,0,0,0.1)]">
+                    <img alt="Instalaciones Premium" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE6xbJ1cuAi9ngDn7l1GtAQq-CjoPQo-wEYPZtjaY2KBNiSQDfOkNetDgXD04VzNkJFax16KemdUmCRGpD0WAah_nptO5wBxpuLcrifXdiyIyWSKEITTo4ToqZJV1Qe_oIt-54uCfTQVKhkIGBNlsWfKyibUDa0pitlGVFPXdiEgFdj0SPh3U90mQKlU2l1q4XXG8yr_ULDToOw4D3oUtVQnUTL1zx_kjm1lAuT1GSiZBD-Bqsz4eZ8A8mrK-DZSilkv5C_eR66kad">
+                    <div class="absolute inset-0 video-overlay-gradient flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity">
+                        <div class="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">Instalaciones Premium</h3>
+                <p class="font-body-md text-body-md text-secondary">Un recorrido por nuestro center quirúrgico diseñado para ofrecer la máxima comodidad y seguridad clínica.</p>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="relative aspect-video rounded-xl overflow-hidden mb-6 shadow-[0_40px_40px_-15px_rgba(0,0,0,0.04)] bg-surface-container transition-all duration-300 group-hover:shadow-[0_40px_40px_-10px_rgba(0,0,0,0.1)]">
+                    <img alt="Testimonio de Paciente" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlDPuctuS963CeoGEkmbvq1EgyjjlIOWkHrhYuAqDtUkHjaqMTaV21oxoPyuXJb1-k1BobmhNYEbS9HwBbZu5-IXpJl3LQqrwCJHeX42wdiaq0Ers2Te2W3G9IB2QHkNA1Ei-Yt9WhfUwtEiE4opoTNdKTb0ILXo1k49oOf3xxWTjxmX6jSzgksE7FhphL0DkmlcTVTj-SGPu3r46C8o8z0a74PJPiFUwGf5v_x9MBjp8KaBAEaeKSLOPapdcM5fbotbVWg7pMXvGO">
+                    <div class="absolute inset-0 video-overlay-gradient flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity">
+                        <div class="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">Testimonio de Paciente</h3>
+                <p class="font-body-md text-body-md text-secondary">La historia de transformación de María: de la inseguridad a una sonrisa radiante tras su tratamiento de implantes.</p>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="relative aspect-video rounded-xl overflow-hidden mb-6 shadow-[0_40px_40px_-15px_rgba(0,0,0,0.04)] bg-surface-container transition-all duration-300 group-hover:shadow-[0_40px_40px_-10px_rgba(0,0,0,0.1)]">
+                    <img alt="Diseño de Sonrisa Digital" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnci_vO90GL121Vqzc8RqN41k4HPltaxJyS-rtvzWfvqcJ4vCdsWFIjKdXqSxZYYPer1T2mSdV2v8Lg_Xvw7Or3iNdml87AVTVmzj65raMZtnEd14L-MVraSidrHGJvEg0CCPt-SW0tqU6VPOranyBxjjxV066GoiwcuQAv72LMo203M4zJ7M021PSJX_UGaKZt0Dw43eZi4lYTRvp9T8R-9ZP31Z66byFFSxgUoiyZKNjUBxOGEeSWXmUhJy82Z30a3zYiMEdXcS5">
+                    <div class="absolute inset-0 video-overlay-gradient flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity">
+                        <div class="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">Diseño de Sonrisa Digital</h3>
+                <p class="font-body-md text-body-md text-secondary">Vea cómo planificamos su sonrisa ideal utilizando software de simulación 3D antes de empezar cualquier tratamiento.</p>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="relative aspect-video rounded-xl overflow-hidden mb-6 shadow-[0_40px_40px_-15px_rgba(0,0,0,0.04)] bg-surface-container transition-all duration-300 group-hover:shadow-[0_40px_40px_-10px_rgba(0,0,0,0.1)]">
+                    <img alt="Implantes de Carga Inmediata" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAevipqWi0oanFVsVkUinCJOVRCDLKz8kJ5V3HwQWr_RgMkTZEDfXqH17c1RkTyUeoftoQgMlhak-b7Vl8j322PvBWe8oG-Z5OCBXq262iUZQPSD3D2M4H0t56j8z_Tjqc6C1DkXryMPdBxD9ikJWOqvJZBqdsVC_rRH6KO_TrHxapz8HXtE1X0IWCjPvLGKnBiuJmMzt30Z3mV_9r5bP7LqLolJBaAFL62NJ49HnDMtEizv_K1mN4Or-rtBWE1gO6-B-SzG-GwLOLS">
+                    <div class="absolute inset-0 video-overlay-gradient flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity">
+                        <div class="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">Implantes de Carga Inmediata</h3>
+                <p class="font-body-md text-body-md text-secondary">La revolución del reemplazo dental: recupere su funcionalidad y estética en una sola sesión clínica.</p>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="relative aspect-video rounded-xl overflow-hidden mb-6 shadow-[0_40px_40px_-15px_rgba(0,0,0,0.04)] bg-surface-container transition-all duration-300 group-hover:shadow-[0_40px_40px_-10px_rgba(0,0,0,0.1)]">
+                    <img alt="Higiene y Protocolos" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGmS4qhkdaP8tDpE9KG5UnDMZr6q1uJGGRmzCfvdlbJHDW0CKCSUsvK6IsxV7wQj0c56NCOaPWBxrAqTD2HGmYu59hN3qRVhkHgTs_2F0qRHx3SH83xymh6Jxbrl1rVK5u-BJ4-_rVE1Q6nK75ZdyMiSsKRdC9ul5pduIWVWgd5atckQmao7YEoxT8ek6eq3hQIZ9SmOhyuywYf0P-4rVo7tYvWWCYvdjN2L380I_Hxkh0uPMSE8rlFRHH88vnRBVxvgwZeHstHJlv">
+                    <div class="absolute inset-0 video-overlay-gradient flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity">
+                        <div class="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">Higiene y Protocolos</h3>
+                <p class="font-body-md text-body-md text-secondary">Conozca nuestros estándares de bioseguridad y por qué la higiene es el pilar de cada procedimiento en Creadent.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary py-24">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="glass-card rounded-2xl p-12 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="font-display-lg text-display-lg-mobile md:text-headline-md text-primary mb-4">¿Desea asesoría personalizada?</h2>
+                    <p class="font-body-lg text-body-lg text-secondary">Nuestros especialistas están listos para analizar su caso y recomendarle el mejor contenido educativo para su tratamiento.</p>
+                </div>
+                <div class="md:w-auto flex flex-col sm:flex-row gap-4">
+                    <button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-caps text-label-caps hover:scale-[0.98] transition-transform shadow-lg">Solicitar Información</button>
+                    <button class="border border-primary text-primary px-8 py-4 rounded-lg font-label-caps text-label-caps hover:bg-surface-container-low transition-colors">Ver Más Videos</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-surface-container-highest w-full py-12 border-t border-outline-variant">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <div class="flex flex-col gap-4">
+            <span class="font-headline-md text-headline-md text-primary">Creadent</span>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                Excelencia clínica y atención de vanguardia para transformar su sonrisa.
+            </p>
+            <div class="flex gap-4 mt-2">
+                <a class="text-primary hover:text-on-primary-container transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+                <a class="text-primary hover:text-on-primary-container transition-colors" href="#"><span class="material-symbols-outlined">camera</span></a>
+                <a class="text-primary hover:text-on-primary-container transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4">
+            <h4 class="font-label-caps text-label-caps text-primary uppercase">Institucional</h4>
+            <ul class="flex flex-col gap-2">
+                <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline decoration-2 underline-offset-4 transition-opacity duration-200" href="#">Política de Privacidad</a></li>
+                <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline decoration-2 underline-offset-4 transition-opacity duration-200" href="#">Términos de Servicio</a></li>
+                <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline decoration-2 underline-offset-4 transition-opacity duration-200" href="#">Aviso Legal</a></li>
+                <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline decoration-2 underline-offset-4 transition-opacity duration-200" href="#">Soporte Técnico</a></li>
+            </ul>
+        </div>
+        <div class="flex flex-col gap-4">
+            <h4 class="font-label-caps text-label-caps text-primary uppercase">Contacto</h4>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+                Av. de la Innovación 450, Suite 102<br>
+                CDMX, México<br>
+                +52 (55) 1234 5678<br>
+                contacto@creadent.com
+            </p>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-4">
+                © 2024 Creadent. Todos los derechos reservados.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+        // Lógica de microinteracciones de tarjetas de video
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const playBtn = card.querySelector('.w-16, .w-24');
+                if(playBtn) playBtn.classList.add('bg-white/40');
+            });
+            card.addEventListener('mouseleave', () => {
+                const playBtn = card.querySelector('.w-16, .w-24');
+                if(playBtn) playBtn.classList.remove('bg-white/40');
+            });
+        });
+
+        // Lógica de control para Menú Móvil
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if(menuBtn && closeBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-x-full');
+            });
+
+            closeBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+
+            // Cerrar menú móvil al hacer clic en enlaces internos
+            document.querySelectorAll('#mobile-menu a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', () => {
+                    mobileMenu.classList.add('translate-x-full');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

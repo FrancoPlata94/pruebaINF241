@@ -1,0 +1,406 @@
+<!DOCTYPE html><html class="light" lang="es" style=""><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-primary": "#ffffff",
+                "secondary-container": "#e0e3e5",
+                "surface-container-high": "#eae7e7",
+                "outline": "#73777f",
+                "surface-dim": "#dcd9d9",
+                "inverse-surface": "#303030",
+                "secondary-fixed-dim": "#c4c7c9",
+                "on-tertiary-fixed": "#301400",
+                "glass-fill": "rgba(255, 255, 255, 0.7)",
+                "surface-container-highest": "#e5e2e1",
+                "surface": "#fcf9f8",
+                "surface-chalk": "#F8F8F8",
+                "secondary-fixed": "#e0e3e5",
+                "primary-container": "#003355",
+                "on-secondary-fixed": "#191c1e",
+                "outline-variant": "#c2c7cf",
+                "on-tertiary-container": "#c98b5d",
+                "background": "#fcf9f8",
+                "on-primary-fixed-variant": "#21496d",
+                "on-error-container": "#93000a",
+                "surface-bright": "#fcf9f8",
+                "on-surface-variant": "#42474e",
+                "on-secondary-fixed-variant": "#444749",
+                "on-primary-fixed": "#001d34",
+                "primary-fixed": "#cfe5ff",
+                "tertiary-fixed": "#ffdcc5",
+                "secondary": "#5c5f61",
+                "inverse-primary": "#a4caf4",
+                "surface-tint": "#3b6186",
+                "tertiary": "#301500",
+                "tertiary-fixed-dim": "#fcb886",
+                "primary-fixed-dim": "#a4caf4",
+                "on-tertiary-fixed-variant": "#6a3b14",
+                "on-secondary-container": "#626567",
+                "surface-container-lowest": "#ffffff",
+                "glass-border": "rgba(255, 255, 255, 0.2)",
+                "tertiary-container": "#4f2601",
+                "error-container": "#ffdad6",
+                "on-surface": "#1b1c1c",
+                "on-tertiary": "#ffffff",
+                "primary": "#001d34",
+                "on-error": "#ffffff",
+                "surface-container-low": "#f6f3f2",
+                "on-background": "#1b1c1c",
+                "on-secondary": "#ffffff",
+                "surface-container": "#f0eded",
+                "inverse-on-surface": "#f3f0ef",
+                "on-primary-container": "#769cc3",
+                "error": "#ba1a1a",
+                "surface-variant": "#e5e2e1"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "margin-mobile": "20px",
+                "margin-desktop": "64px",
+                "container-max": "1280px",
+                "baseline": "8px",
+                "gutter": "24px"
+            },
+            "fontFamily": {
+                "headline-md": ["Plus Jakarta Sans"],
+                "display-lg-mobile": ["Plus Jakarta Sans"],
+                "label-caps": ["Inter"],
+                "body-lg": ["Inter"],
+                "display-lg": ["Plus Jakarta Sans"],
+                "body-md": ["Inter"]
+            },
+            "fontSize": {
+                "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.8", "fontWeight": "400"}],
+                "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+        },
+    },
+}
+</script>
+<style>
+    .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 40px 40px -20px rgba(0, 51, 85, 0.04);
+    }
+    .soft-shadow {
+        box-shadow: 0 40px 40px -20px rgba(0, 51, 85, 0.04);
+    }
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .active-tab {
+        color: #001d34;
+        font-weight: 700;
+        border-bottom: 2px solid #001d34;
+        padding-bottom: 0.25rem;
+    }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+    <!-- TopNavBar -->
+    <header class="sticky top-4 mx-auto w-[95%] max-w-container-max rounded-full z-50 flex justify-between items-center px-gutter py-3 shadow-xl border border-primary/20 bg-primary-container">
+        <div class="flex items-center h-16 w-48">
+            <img src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ" alt="Creadent Logo" class="h-full w-auto object-contain">
+        </div>
+        <nav class="hidden md:flex gap-8 items-center">
+            <a class="text-white hover:text-primary-fixed transition-colors" href="index.html">Inicio</a>
+            
+            <div class="relative group">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-2 font-body-md text-body-md" href="marco-teorico.html">
+                    Marco Teorico <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+                </a>
+                <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 transition-all duration-300 origin-top pointer-events-none border border-outline-variant/30 group-hover:opacity-100 group-hover:scale-y-100 group-hover:pointer-events-auto">
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#introduccion">Introduccion</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#antecedentes">Antecedentes</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#planteamiento">Planteamiento del Problema</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#arbol">Arbol de problema</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#formulacion">Formulacion del problema</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#proposito">Proposito del estudio</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#metodologia">Metodologia</a>
+                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#cronograma">Planificacion de actividades</a>
+                </div>
+            </div>
+
+            <!-- MENÚ DESPLEGABLE DE ANÁLISIS ESTRUCTURADO CORREGIDO -->
+            <div class="relative group">
+                <!-- Cambiado a enlace apuntando exactamente a tu archivo -->
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-2 font-body-md text-body-md" href="analisis-estrcuturado.html">
+                    Analisis Estructurado <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+                </a>
+                
+                <!-- Contenedor del menú desplegable -->
+                <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 transition-all duration-300 origin-top pointer-events-none border border-outline-variant/30 group-hover:opacity-100 group-hover:scale-y-100 group-hover:pointer-events-auto">
+                    
+                    <div class="px-6 py-2 text-label-caps text-primary/50">Modelo Ambiental</div>
+                    <!-- Enlaces ajustados al nombre exacto de tu archivo y sus respectivas secciones -->
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#propositos">Declaracion de Propositos</a>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#contexto">Diagrama de Contexto</a>
+                    
+                    <div class="px-6 py-2 mt-2 text-label-caps text-primary/50">Modelo de Comportamiento</div>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#dfd">DFD por Niveles</a>
+                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#der">DER</a>
+                    
+                </div>
+            </div>
+
+            <a class="text-white hover:text-primary-fixed transition-colors" href="orientado-a-objetos.html">Orientado A Objetos</a>
+            <a class="text-white hover:text-primary-fixed transition-colors" href="video.html">Videos</a>
+            <a class="text-white hover:text-primary-fixed transition-colors" href="contactos.html">Contactos</a>
+        </nav>
+        <button class="border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-primary transition-all active:scale-95 shadow-md">
+            Agendar Cita
+        </button>
+    </header>
+    <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
+        <section id="introduccion" class="mb-24 flex flex-col md:flex-row items-center gap-12 scroll-mt-28">
+            <div class="flex-1 space-y-6">
+                <span class="inline-block text-primary font-label-caps text-label-caps tracking-widest bg-primary-fixed px-3 py-1 rounded-full">INVESTIGACIÓN CLÍNICA</span>
+                <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary leading-tight">Marco Teórico y Fundamentación Científica</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Introducción a los principios científicos que rigen la ortodoncia e implantología moderna en Creadent, garantizando tratamientos basados en la evidencia para la salud oral óptima.
+                </p>
+            </div>
+            <div class="flex-1 w-full aspect-video rounded-3xl overflow-hidden soft-shadow relative">
+                <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9PNEUKZxyaj4oUnkvCWjwM68vSnOALVVkkhjIvhYcpuPqHzlVpey1DFvYHj-_UdWjO4IG3VgCwTEcweLQn5cznn-6ftVhYsz9d0v_Y5Qysr_UN1q4Eou8W6DkH5gfVeZvXdQ7uZ4BXKQiSHCFJEoltyYGWSoj2Qyu0DquD5swtd1OGSJ1DTi8YVADld0dbEQZLtlhBIVKByZZS7XjupQ2DIXc9mlgZm8735w34d9b6hrmsj5AJAGBiqwbeBtyo3pDaeaCd5CgflE-">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-24">
+            <div id="antecedentes" class="md:col-span-7 bg-surface-container-lowest p-10 rounded-3xl soft-shadow border border-outline-variant/30 scroll-mt-28">
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="material-symbols-outlined text-primary text-3xl">history_edu</span>
+                    <h2 class="font-headline-md text-headline-md text-primary">Antecedentes</h2>
+                </div>
+                <div class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+                    <p>La evolución de la ortodoncia ha transitado desde técnicas mecánicas puras hasta la integración de la biología ósea y la biomecánica avanzada. En Creadent, retomamos los estudios clásicos de Angle combinados con la vanguardia tecnológica en alineación invisible e implantes de carga inmediata.</p>
+                    <p>Revisiones sistemáticas recientes demuestran que la integración temprana de diagnósticos digitales reduce los tiempos de tratamiento en un 30%, fundamentando nuestra metodología operativa.</p>
+                </div>
+            </div>
+            <div id="planteamiento" class="md:col-span-5 bg-primary-container text-on-primary-container p-10 rounded-3xl soft-shadow scroll-mt-28">
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="material-symbols-outlined text-primary-fixed text-3xl">priority_high</span>
+                    <h2 class="font-headline-md text-headline-md text-on-primary">Planteamiento del Problema</h2>
+                </div>
+                <p class="font-body-md text-body-md text-on-primary-container/90">
+                    A pesar de los avances, una gran proporción de la población presenta maloclusiones complejas y pérdida dental prematura que afecta no solo la estética, sino la función masticatoria y la salud sistémica. El desafío reside en proveer soluciones definitivas, menos invasivas y de alta durabilidad.
+                </p>
+            </div>
+        </section>
+
+        <section id="arbol" class="mb-24 py-12 scroll-mt-28">
+            <div class="text-center mb-16">
+                <h2 class="font-display-lg text-headline-md text-primary mb-4">Árbol del Problema</h2>
+                <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                <div class="bg-surface-chalk p-8 rounded-2xl border border-outline-variant/50 relative">
+                    <div class="absolute -top-4 left-8 bg-error text-on-error px-4 py-1 rounded-full font-label-caps text-[10px] tracking-widest">EFECTOS</div>
+                    <ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+                        <li class="flex gap-3"><span class="material-symbols-outlined text-error text-xl">trending_down</span> Baja autoestima y fobia social</li>
+                        <li class="flex gap-3"><span class="material-symbols-outlined text-error text-xl">trending_down</span> Problemas digestivos por mala masticación</li>
+                        <li class="flex gap-3"><span class="material-symbols-outlined text-error text-xl">trending_down</span> Desgaste articular (ATM) severo</li>
+                    </ul>
+                </div>
+                <div class="bg-primary p-8 rounded-2xl shadow-2xl flex flex-col justify-center items-center text-center transform md:scale-110 z-10">
+                    <span class="material-symbols-outlined text-on-primary text-5xl mb-4">emergency_home</span>
+                    <h3 class="font-headline-md text-headline-md text-on-primary leading-tight">Alta Incidencia de Patologías Dentomaxilares</h3>
+                </div>
+                <div class="bg-surface-chalk p-8 rounded-2xl border border-outline-variant/50 relative">
+                    <div class="absolute -top-4 left-8 bg-primary-container text-on-primary-container px-4 py-1 rounded-full font-label-caps text-[10px] tracking-widest">CAUSAS</div>
+                    <ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+                        <li class="flex gap-3"><span class="material-symbols-outlined text-primary text-xl">account_tree</span> Factores genéticos hereditarios</li>
+                        <li class="flex gap-3"><span class="material-symbols-outlined text-primary text-xl">account_tree</span> Malos hábitos en la infancia</li>
+                        <li class="flex gap-3"><span class="material-symbols-outlined text-primary text-xl">account_tree</span> Falta de acceso a prevención oportuna</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24 items-center">
+            <div class="space-y-8">
+                <div id="formulacion" class="scroll-mt-28">
+                    <h2 class="font-headline-md text-headline-md text-primary mb-4">Formulación del Problema</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant italic border-l-4 border-primary pl-6">
+                        "¿Cómo impacta la aplicación de protocolos digitales de ortodoncia e implantología guiada en la predictibilidad de los resultados estéticos y funcionales a largo plazo en pacientes adultos?"
+                    </p>
+                </div>
+                <div id="proposito" class="scroll-mt-28">
+                    <h2 class="font-headline-md text-headline-md text-primary mb-4">Propósito del Estudio</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        El propósito central es estandarizar un modelo de atención odontológica premium que minimice el error humano mediante el uso de escaneo intraoral y planificación 3D, elevando el estándar de éxito en rehabilitaciones orales complejas.
+                    </p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                    <div class="h-48 rounded-2xl overflow-hidden shadow-lg">
+                        <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC9bNcoNugxVi4yWK8pA6qdtiowLjg8SBO8uO3au20WXex8TSXfe9WoXgHBhu-aRqevVz78coaOzCfqKdL1-zt8uVgOUR1ilDNXul25QL9P5AUQ1qRrU40o6zT9-oxGUG7TWmvKUC6ZGrxNcif36renFXko1mlu9HQqTg0AAOpS_Y4JC9p-fDsJmtj0vzEbAdhP0UfGF9Bp-Pc-1c-ZoWb2mJRCK2OxcveKSY5edX1k4hP8Wk1IvS8Y39QAY1LLAHrxd8ebVJ1l3Hz">
+                    </div>
+                    <div class="h-64 rounded-2xl overflow-hidden shadow-lg">
+                        <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9YPqVpDxWr8JN2xTjHlzNzZj4QeURLUGx9brVMqB76PSENDIH8uYc07QL08HHpirUf7lkopWYcYauB2_znMMqr9Ld6PTxGuEIQdyeLAKHhFX9GXwfQp4bs2J-EdXbJj5eNOpXWTn7ubgCok2VjY8SHa3cJgO2H2Ei5njz_d6locGLGOAKI8o7Ad8ssPgbfxRLMZC6v5Yiykfpb0JWhfPmLrYDktP03xu_-mfJMhaJQIXWt4Q3EfJUw-M6FzOQsXnYrUbkeDoFAUSo">
+                    </div>
+                </div>
+                <div class="space-y-4 pt-8">
+                    <div class="h-64 rounded-2xl overflow-hidden shadow-lg">
+                        <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlCaSlkq77R0hXIE6Z0Y3j_05sLC3NNkgSntAlwuseeKQhF9mMfLaNXtKNZVyPJZzR7NtEmXZelU2a7riWCT_qhvvK8kSDXr-jgrDFF-zhIDkzi9oix6q3YzyGw2L3eASm5oWpYDvvQDS1iXgrMZuLsE0lWjR1AJt2BcHf2ai7w9adKK1Ls-9sjMyJNkqOq3A5K4pDHQCgMHuVv8A_5GJL1NqWCHyjgNKxPb7HvkQcVrGdxnL7vF4CEFq7I3zA_6_pUOTFtCmRUdag">
+                    </div>
+                    <div class="h-48 rounded-2xl overflow-hidden shadow-lg">
+                        <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsJF2_QYjGgNx0I9alEK-dR1kKYKYQOzKVbZllLkCBQXcsriHD1DgtqSLHGOoK2N_Ftz-rHptfUYWCBQHgP4f6BCPeA6nSPOcK13M0m2eJ-DQi4frYt5TkBf9UaP8SXHg8xc9_ohnUkQPIqmS8MyEKtKiyrkn9Gz8SG6HALcmZjqBK8-mF3iHHnnz9-RLRkQUtWKH3e1VZqOaEtD7NR1xUQEyn7PkiEmLqn6EAgkQEInDu_QA01iA4_m7TdJb2imVf1KeJJz4OCOpP">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="metodologia" class="mb-24 scroll-mt-28">
+            <h2 class="font-display-lg text-headline-md text-primary text-center mb-12">Metodología de Trabajo</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="glass-card p-8 rounded-3xl text-center space-y-4 group hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+                        <span class="material-symbols-outlined text-3xl">biotech</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary">Analítica</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Diagnóstico profundo mediante escaneo volumétrico y análisis cefalométrico digital.</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl text-center space-y-4 group hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+                        <span class="material-symbols-outlined text-3xl">design_services</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary">Diseño</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Simulación virtual del resultado final (Smile Design) previo al inicio clínico.</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl text-center space-y-4 group hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+                        <span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary">Ejecución</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Intervenciones guiadas por software para máxima precisión y mínimo trauma.</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl text-center space-y-4 group hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+                        <span class="material-symbols-outlined text-3xl">verified</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary">Validación</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Monitoreo post-tratamiento para asegurar la estabilidad biológica y estética.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cronograma" class="mb-24 scroll-mt-28">
+            <h2 class="font-display-lg text-headline-md text-primary mb-8">Cronograma de Planificación</h2>
+            <div class="overflow-hidden rounded-3xl border border-outline-variant bg-surface-container-lowest soft-shadow">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-primary-container text-on-primary-container">
+                            <th class="p-6 font-label-caps text-label-caps uppercase tracking-widest">Actividad</th>
+                            <th class="p-6 font-label-caps text-label-caps uppercase tracking-widest">Fase</th>
+                            <th class="p-6 font-label-caps text-label-caps uppercase tracking-widest">Duración Est.</th>
+                            <th class="p-6 font-label-caps text-label-caps uppercase tracking-widest">Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody class="font-body-md text-body-md text-on-surface-variant">
+                        <tr class="border-b border-outline-variant/30 hover:bg-surface-chalk transition-colors">
+                            <td class="p-6 font-semibold text-primary">Recolección de datos clínicos</td>
+                            <td class="p-6">Fase I: Diagnóstico</td>
+                            <td class="p-6">1-2 Semanas</td>
+                            <td class="p-6"><span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full text-xs font-bold uppercase">Completado</span></td>
+                        </tr>
+                        <tr class="border-b border-outline-variant/30 hover:bg-surface-chalk transition-colors">
+                            <td class="p-6 font-semibold text-primary">Planificación Digital 3D</td>
+                            <td class="p-6">Fase II: Diseño</td>
+                            <td class="p-6">1 Semana</td>
+                            <td class="p-6"><span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-xs font-bold uppercase">En Progreso</span></td>
+                        </tr>
+                        <tr class="border-b border-outline-variant/30 hover:bg-surface-chalk transition-colors">
+                            <td class="p-6 font-semibold text-primary">Fase Quirúrgica / Instalación</td>
+                            <td class="p-6">Fase III: Clinical</td>
+                            <td class="p-6">Variable</td>
+                            <td class="p-6"><span class="px-3 py-1 bg-surface-container text-on-surface-variant rounded-full text-xs font-bold uppercase">Pendiente</span></td>
+                        </tr>
+                        <tr class="hover:bg-surface-chalk transition-colors">
+                            <td class="p-6 font-semibold text-primary">Evaluación de Resultados</td>
+                            <td class="p-6">Fase IV: Seguimiento</td>
+                            <td class="p-6">6-12 Meses</td>
+                            <td class="p-6"><span class="px-3 py-1 bg-surface-container text-on-surface-variant rounded-full text-xs font-bold uppercase">Pendiente</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container dark:bg-surface-dim w-full py-12 border-t border-outline-variant">
+        <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-4">
+                <div class="font-display-lg text-headline-md font-bold text-primary dark:text-primary-fixed">
+                    Creadent
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                    Líderes en ortodoncia e implantología oral con un enfoque científico y humano.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-2">
+                    <h4 class="font-label-caps text-label-caps text-primary uppercase font-bold mb-4">Redes</h4>
+                    <a class="block font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Facebook</a>
+                    <a class="block font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Instagram</a>
+                    <a class="block font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">LinkedIn</a>
+                </div>
+                <div class="space-y-2">
+                    <h4 class="font-label-caps text-label-caps text-primary uppercase font-bold mb-4">Legal</h4>
+                    <a class="block font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacidad</a>
+                    <a class="block font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Términos</a>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <h4 class="font-label-caps text-label-caps text-primary uppercase font-bold mb-4">Suscripción</h4>
+                <div class="flex gap-2">
+                    <input class="bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-2 w-full focus:ring-primary focus:border-primary" placeholder="Email" type="email">
+                    <button class="bg-primary text-on-primary px-4 py-2 rounded-lg material-symbols-outlined">send</button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-desktop mt-12 pt-8 border-t border-outline-variant/30 text-center">
+            <p class="font-body-md text-body-md text-on-surface-variant opacity-70">
+                © 2024 Creadent Ortodoncia &amp; Implantologia Oral. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+    <script>
+        // Simple parallax effect for images on scroll
+        window.addEventListener('scroll', () => {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                const speed = 0.05;
+                const rect = img.getBoundingClientRect();
+                if(rect.top < window.innerHeight && rect.bottom > 0) {
+                    const yPos = -(rect.top * speed);
+                    img.style.transform = `translateY(${yPos}px) scale(1.05)`;
+                    img.style.transition = 'transform 0.1s ease-out';
+                }
+            });
+        });
+    </script>
+
+
+</body></html>
