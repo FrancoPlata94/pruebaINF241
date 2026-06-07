@@ -1,366 +1,341 @@
 <!DOCTYPE html>
-<html class="light" lang="es">
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Modelo Ambiental - Análisis Estructurado | Creadent</title>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-primary": "#ffffff",
-                        "secondary-container": "#e0e3e5",
-                        "surface-container-high": "#eae7e7",
-                        "outline": "#73777f",
-                        "surface-dim": "#dcd9d9",
-                        "inverse-surface": "#303030",
-                        "secondary-fixed-dim": "#c4c7c9",
-                        "on-tertiary-fixed": "#301400",
-                        "glass-fill": "rgba(255, 255, 255, 0.7)",
-                        "surface-container-highest": "#e5e2e1",
-                        "surface": "#fcf9f8",
-                        "surface-chalk": "#F8F8F8",
-                        "secondary-fixed": "#e0e3e5",
-                        "primary-container": "#003355",
-                        "on-secondary-fixed": "#191c1e",
-                        "outline-variant": "#c2c7cf",
-                        "on-tertiary-container": "#c98b5d",
-                        "background": "#fcf9f8",
-                        "on-primary-fixed-variant": "#21496d",
-                        "on-error-container": "#93000a",
-                        "surface-bright": "#fcf9f8",
-                        "on-surface-variant": "#42474e",
-                        "on-secondary-fixed-variant": "#444749",
-                        "on-primary-fixed": "#001d34",
-                        "primary-fixed": "#cfe5ff",
-                        "tertiary-fixed": "#ffdcc5",
-                        "secondary": "#5c5f61",
-                        "inverse-primary": "#a4caf4",
-                        "surface-tint": "#3b6186",
-                        "tertiary": "#301500",
-                        "tertiary-fixed-dim": "#fcb886",
-                        "primary-fixed-dim": "#a4caf4",
-                        "on-tertiary-fixed-variant": "#6a3b14",
-                        "on-secondary-container": "#626567",
-                        "surface-container-lowest": "#ffffff",
-                        "glass-border": "rgba(255, 255, 255, 0.2)",
-                        "tertiary-container": "#4f2601",
-                        "error-container": "#ffdad6",
-                        "on-surface": "#1b1c1c",
-                        "on-tertiary": "#ffffff",
-                        "primary": "#001d34",
-                        "on-error": "#ffffff",
-                        "surface-container-low": "#f6f3f2",
-                        "on-background": "#1b1c1c",
-                        "on-secondary": "#ffffff",
-                        "surface-container": "#f0eded",
-                        "inverse-on-surface": "#f3f0ef",
-                        "on-primary-container": "#769cc3",
-                        "error": "#ba1a1a",
-                        "surface-variant": "#e5e2e1"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "margin-mobile": "20px",
-                        "margin-desktop": "64px",
-                        "container-max": "1280px",
-                        "baseline": "8px",
-                        "gutter": "24px"
-                    },
-                    "fontFamily": {
-                        "headline-md": ["Plus Jakarta Sans"],
-                        "display-lg-mobile": ["Plus Jakarta Sans"],
-                        "label-caps": ["Inter"],
-                        "body-lg": ["Inter"],
-                        "display-lg": ["Plus Jakarta Sans"],
-                        "body-md": ["Inter"]
-                    },
-                    "fontSize": {
-                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
-                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
-                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                        "body-lg": ["18px", {"lineHeight": "1.8", "fontWeight": "400"}],
-                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
-                    }
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-primary": "#ffffff",
+                "secondary-container": "#e0e3e5",
+                "surface-container-high": "#eae7e7",
+                "outline": "#73777f",
+                "surface-dim": "#dcd9d9",
+                "inverse-surface": "#303030",
+                "secondary-fixed-dim": "#c4c7c9",
+                "on-tertiary-fixed": "#301400",
+                "glass-fill": "rgba(255, 255, 255, 0.7)",
+                "surface-container-highest": "#e5e2e1",
+                "surface": "#fcf9f8",
+                "surface-chalk": "#F8F8F8",
+                "secondary-fixed": "#e0e3e5",
+                "primary-container": "#003355",
+                "on-secondary-fixed": "#191c1e",
+                "outline-variant": "#c2c7cf",
+                "on-tertiary-container": "#c98b5d",
+                "background": "#fcf9f8",
+                "on-primary-fixed-variant": "#21496d",
+                "on-error-container": "#93000a",
+                "surface-bright": "#fcf9f8",
+                "on-surface-variant": "#42474e",
+                "on-secondary-fixed-variant": "#444749",
+                "on-primary-fixed": "#001d34",
+                "primary-fixed": "#cfe5ff",
+                "tertiary-fixed": "#ffdcc5",
+                "secondary": "#5c5f61",
+                "inverse-primary": "#a4caf4",
+                "surface-tint": "#3b6186",
+                "tertiary": "#301500",
+                "tertiary-fixed-dim": "#fcb886",
+                "primary-fixed-dim": "#a4caf4",
+                "on-tertiary-fixed-variant": "#6a3b14",
+                "on-secondary-container": "#626567",
+                "surface-container-lowest": "#ffffff",
+                "glass-border": "rgba(255, 255, 255, 0.2)",
+                "tertiary-container": "#4f2601",
+                "error-container": "#ffdad6",
+                "on-surface": "#1b1c1c",
+                "on-tertiary": "#ffffff",
+                "primary": "#001d34",
+                "on-error": "#ffffff",
+                "surface-container-low": "#f6f3f2",
+                "on-background": "#1b1c1c",
+                "on-secondary": "#ffffff",
+                "surface-container": "#f0eded",
+                "inverse-on-surface": "#f3f0ef",
+                "on-primary-container": "#769cc3",
+                "error": "#ba1a1a",
+                "surface-variant": "#e5e2e1"
             },
-        }
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "margin-mobile": "20px",
+                "margin-desktop": "64px",
+                "container-max": "1280px",
+                "baseline": "8px",
+                "gutter": "24px"
+            },
+            "fontFamily": {
+                "headline-md": ["Plus Jakarta Sans"],
+                "display-lg-mobile": ["Plus Jakarta Sans"],
+                "label-caps": ["Inter"],
+                "body-lg": ["Inter"],
+                "display-lg": ["Plus Jakarta Sans"],
+                "body-md": ["Inter"]
+            },
+            "fontSize": {
+                "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.8", "fontWeight": "400"}],
+                "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+        },
+      },
+    }
     </script>
     <style>
-        body { background-color: #fcf9f8; color: #1b1c1c; }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-        .glass-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.2); }
-        .soft-shadow { box-shadow: 0 40px 40px -20px rgba(0, 0, 0, 0.04); }
+      .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+          display: inline-block;
+          vertical-align: middle;
+      }
+      body {
+          background-color: #fcf9f8;
+          -webkit-font-smoothing: antialiased;
+      }
+      .glass-card {
+          background: rgba(255, 255, 255, 0.7);
+          backdrop-filter: blur(12px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          box-shadow: 0 40px 40px -20px rgba(0, 51, 85, 0.04);
+      }
     </style>
 </head>
-<body class="font-body-md text-body-md overflow-x-hidden">
-    <nav class="sticky top-4 mx-auto w-[95%] max-w-container-max rounded-full z-50 flex justify-between items-center px-gutter py-3 border border-primary/20 shadow-2xl bg-primary-container transition-all duration-300" id="top-nav">
-        <div class="flex items-center w-48">
-            <img src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ" alt="Creadent Logo" class="h-10 md:h-12 w-auto object-contain">
+<body class="font-body-md text-on-surface">
+
+    <nav class="sticky top-4 mx-auto w-[95%] max-w-container-max rounded-full z-50 flex justify-between items-center px-6 py-3 shadow-xl border border-primary/20 bg-primary-container">
+        
+        <!-- LOGO -->
+        <div class="flex items-center gap-3 shrink-0">
+            <img alt="Logo Creadent" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLtpRhrcZuRR7F_uG5sZ4agLA73XMwu9JRl5STZmwkf2k0c8G8pu6_DwnKjGoE3lmmzfJHx-dJM3Jff_76FDH5z48bxU9w_LJtLc3SsG5Gzlw00PZU2c6nFymG8_TwsvqsCBW_4iC6A7AigpWWRzfeTKtWQRJWQUb7vH1yDW-LLsccc_RnR7P5wddRDlMXdNhC7Fgukm0Pw_C-0WjduA0XyK5k663Lf2Et4UAAMcUxvysdQekC0yI03vAAIQ">
+            <!-- Se oculta en pantallas medianas para dar espacio a los enlaces -->
+            <span class="font-display-lg text-headline-md font-bold text-white hidden xl:block">Creadent</span>
         </div>
-        <div class="hidden md:flex items-center gap-8">
-            <a class="text-white font-bold border-b-2 border-white pb-1" href="index.html">Inicio</a>
+        
+        <!-- ENLACES CENTRALES -->
+        <!-- Cambiamos md:flex a lg:flex y ajustamos el gap dinámico (gap-3 a gap-6) -->
+        <div class="hidden lg:flex items-center justify-center gap-3 xl:gap-6 font-body-md text-sm xl:text-base w-full">
+            <a class="text-white font-bold border-b-2 border-white pb-1 shrink-0" href="index.html">Inicio</a>
             
-            <div class="relative group">
-                <button class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-2">
-                    Marco Teorico <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
-                </button>
-                <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 transition-all duration-300 origin-top pointer-events-none border border-outline-variant/30 group-hover:opacity-100 group-hover:scale-y-100 group-hover:pointer-events-auto">
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#introduccion">Introduccion</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#antecedentes">Antecedentes</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#planteamiento">Planteamiento del Problema</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#arbol">Arbol de problema</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#formulacion">Formulacion del problema</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#proposito">Proposito del estudio</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#metodologia">Metodologia</a>
-                    <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#planificacion">Planificacion de actividades</a>
+            <!-- DROPDOWN 1: Marco Teórico -->
+            <div class="relative group h-full">
+                <!-- Aumentamos el padding vertical (py-4) para expandir el área táctil -->
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer">
+                    Marco Teórico 
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <!-- "EL PUENTE INVISIBLE": absolute top-full con pt-2 permite cruzar el mouse sin que se cierre -->
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#introduccion">Introducción</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#antecedentes">Antecedentes</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#problema">Planteamiento del Problema</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#arbol">Árbol de problema</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#formulacion">Formulación del problema</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#proposito">Propósito del estudio</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#metodologia">Metodología</a>
+                        <a class="block px-6 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="marco-teorico.html#planificacion">Planificación de actividades</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DROPDOWN 2: Análisis Estructurado -->
+            <div class="relative group h-full">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer">
+                    Análisis Estructurado 
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <div class="px-6 py-1.5 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo Ambiental</div>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#proposito">Declaración de Propósitos</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-ambiental.html#contexto">Diagrama de Contexto</a>
+                        
+                        <div class="px-6 py-1.5 mt-2 text-[11px] font-bold tracking-wider text-primary/40 uppercase font-label-caps">Modelo de Comportamiento</div>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#dfd">DFD por Niveles</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#der">DER</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DROPDOWN 3: Diagramas -->
+            <div class="relative group h-full">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0">
+                    Diagramas
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="orientado-a-objetos.html">Diagrama de clases</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="diagrama-procesos.html">Diagrama de Procesos</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="relative group">
-                <button class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-2">
-                    Análisis Estructurado <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
-                </button>
-                <div class="dropdown-menu absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest shadow-2xl rounded-xl py-4 opacity-0 scale-y-0 transition-all duration-300 origin-top pointer-events-none border border-outline-variant/30 group-hover:opacity-100 group-hover:scale-y-100 group-hover:pointer-events-auto">
-                    <div class="px-6 py-2 text-label-caps text-primary/50 font-bold">Modelo Ambiental</div>
-                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#propositos">Declaracion de Propositos</a>
-                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#contexto">Diagrama de Contexto</a>
-                    <div class="px-6 py-2 mt-2 text-label-caps text-primary/50 font-bold">Modelo de Comportamiento</div>
-                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#dfd">DFD por Niveles</a>
-                    <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="modelo-de-comportamiento.html#der">DER</a>
+            <!-- DROPDOWN 4: Casos de Uso -->
+            <div class="relative group h-full">
+                <a class="flex items-center gap-1 text-white hover:text-primary-fixed transition-colors py-4 cursor-pointer shrink-0">
+                    Casos de Uso
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">keyboard_arrow_down</span>
+                </a>
+                
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 scale-y-0 transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div class="bg-surface-container-lowest shadow-2xl rounded-xl py-4 border border-outline-variant/30">
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso.html">Caso de Uso</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso-Negocios.html">Casos de Uso de Negocio</a>
+                        <a class="block px-8 py-2 hover:bg-surface-container text-body-md text-on-surface-variant hover:text-primary transition-colors" href="Caso-de-uso-nivel-expandido.html">Casos de Uso A Nivel Expandido</a>
+                    </div>
                 </div>
-            </div>
-
-            <a class="text-white hover:text-primary-fixed transition-colors" href="orientado-a-objetos.html">Orientado A Objetos</a>
-            <a class="text-white hover:text-primary-fixed transition-colors" href="video.html">Videos</a>
-            <a class="text-white hover:text-primary-fixed transition-colors" href="contactos.html">Contactos</a>
+            </div>            
+            
+            <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="video.html">Videos</a>
+            <a class="text-white hover:text-primary-fixed transition-colors py-4 shrink-0" href="contactos.html">Contactos</a>
         </div>
-        <button class="hidden lg:flex border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-primary transition-all active:scale-95 shadow-md">
-            Agendar Cita
-        </button>
+        
+        <!-- BOTONES DERECHOS -->
+        <div class="flex items-center gap-4 shrink-0">
+            <!-- Se oculta en lg para que quepan los menús. Vuelve a aparecer en monitores grandes (xl) -->
+            <button class="hidden xl:block border-2 border-white text-white px-6 py-2 rounded-full font-bold hover:bg-white hover:text-primary transition-all active:scale-95 shadow-md whitespace-nowrap">Agendar Cita</button>
+            <button class="lg:hidden text-white"><span class="material-symbols-outlined text-3xl mt-1">menu</span></button>
+        </div>
     </nav>
 
-    <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
-        <header class="mb-20 text-center max-w-3xl mx-auto">
-            <span class="font-label-caps text-label-caps text-on-primary-container tracking-widest uppercase mb-4 block">Análisis Estructurado</span>
-            <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Modelo Ambiental</h1>
-            <p class="text-on-surface-variant font-body-lg text-body-lg">
-                El Modelo Ambiental define las interfaces entre el sistema y el resto del mundo. Establece el límite de lo que está dentro y fuera del sistema mediante tres herramientas fundamentales.
-            </p>
-        </header>
+    <div id="mobile-menu" class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden">
+        <div id="mobile-menu-content" class="absolute top-0 right-0 w-[280px] h-full bg-white p-6 shadow-2xl flex flex-col justify-between translate-x-full transition-transform duration-300 rounded-l-3xl">
+            <div>
+                <div class="flex justify-between items-center mb-8">
+                    <span class="font-display-lg text-xl font-bold text-primary">Menú</span>
+                    <button id="menu-close-btn" class="text-primary p-1 hover:bg-surface-container rounded-full transition-colors">
+                        <span class="material-symbols-outlined text-2xl">close</span>
+                    </button>
+                </div>
+                <div class="flex flex-col gap-4 text-body-md overflow-y-auto">
+                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="index.html">Inicio</a>
+                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="marco-teorico.html">Marco Teórico</a>
+                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="analisis-estructurado.html">Análisis Estructurado</a>
+                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="orientado-a-objetos.html">Orientado A Objetos</a>
+                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="video.html">Videos</a>
+                    <a class="text-primary hover:text-surface-tint transition-colors py-2 border-b border-outline-variant/10" href="contactos.html">Contactos</a>
+                </div>
+            </div>
+            <button class="w-full bg-primary text-white py-3 rounded-full font-bold hover:bg-primary-container transition-all active:scale-95 shadow-md mt-4">
+                Agendar Cita
+            </button>
+        </div>
+    </div>
 
-        <section id="propositos" class="mb-32 scroll-mt-28">
-            <div class="flex flex-col md:flex-row gap-12 items-center">
-                <div class="flex-1">
-                    <div class="flex items-center gap-3 mb-6">
-                        <span class="material-symbols-outlined text-on-primary-container bg-primary-fixed p-2 rounded-lg">assignment</span>
-                        <h2 class="font-headline-md text-headline-md text-primary">Declaración de Propósitos</h2>
-                    </div>
-                    <div class="bg-surface-container-lowest p-8 rounded-xl soft-shadow border border-surface-container-high">
-                        <p class="font-body-md text-body-md text-on-surface leading-relaxed italic border-l-4 border-primary-container pl-6 py-2">
-                            "El sistema Creadent tiene como propósito fundamental automatizar la gestión clínica y administrativa de la clínica ortodoncia e implantología, garantizando la trazabilidad de los tratamientos, el control eficiente de inventarios médicos y la optimización de la agenda para mejorar la experiencia del paciente."
-                        </p>
-                        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div class="p-4 rounded-lg bg-surface-chalk">
-                                <span class="font-label-caps text-label-caps text-secondary block mb-2">KPI PRINCIPAL</span>
-                                <p class="font-headline-md text-headline-md text-primary">95% Precisión</p>
-                            </div>
-                            <div class="p-4 rounded-lg bg-surface-chalk">
-                                <span class="font-label-caps text-label-caps text-secondary block mb-2">USUARIOS CLAVE</span>
-                                <p class="font-headline-md text-headline-md text-primary">Personal Médico</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-1 w-full h-[400px] rounded-2xl overflow-hidden soft-shadow relative">
-                    <img class="w-full h-full object-cover" alt="A clean, minimalist medical office setting with a focused light on a high-tech digital interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBecfFjcI9DeoNiErKKQM9a4f_zYYNcLy-agdqLtVsm4C0-BVrpd8heQ67arUhawpTCazxX-SoSg7bdjxKbrw3S8wlmUWrYfU5CuTy2Ix5rSuG6fWRZEBqG5HH-OoxSb7pw0ww4w_SvjBeR7j282m_XLy22cr7TxoeTg_G8wOp1syHCXTPXR2MwFz-e7wZQBurORH_LKWbAX4y5X012hyEz4FcQtd-6KYHAMY62eeuXHenI-CzBeEOBgxdDkyZZF_9yXPEpXMzl4Efj">
-                    <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
-                </div>
-            </div>
-        </section>
+    <main class="pt-24 pb-32 max-w-[1200px] mx-auto px-6 min-h-[70vh] flex flex-col items-center justify-start text-center">
+        
+        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-12">
+            A) Declaracion de propositos
+        </h1>
 
-        <section id="contexto" class="mb-32 scroll-mt-28">
-            <div class="text-center mb-12">
-                <div class="inline-flex items-center gap-3 mb-4 bg-surface-container-high px-4 py-2 rounded-full">
-                    <span class="material-symbols-outlined text-primary text-sm">hub</span>
-                    <h2 class="font-label-caps text-label-caps text-primary">Interfaces Externas</h2>
-                </div>
-                <h3 class="font-headline-md text-headline-md text-primary">Diagrama de Contexto</h3>
-            </div>
-            <div class="bg-surface-chalk rounded-3xl p-8 md:p-16 border border-outline-variant flex justify-center items-center relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none" style="background-image: radial-gradient(#001d34 1px, transparent 1px); background-size: 24px 24px;"></div>
-                <div class="relative w-full max-w-4xl grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-                    <div class="flex flex-col gap-6">
-                        <div class="glass-card p-5 rounded-xl border border-primary-container/20 text-center hover:scale-105 transition-transform">
-                            <span class="material-symbols-outlined text-primary mb-2">person</span>
-                            <p class="font-label-caps text-label-caps text-primary">Paciente</p>
-                        </div>
-                        <div class="glass-card p-5 rounded-xl border border-primary-container/20 text-center hover:scale-105 transition-transform">
-                            <span class="material-symbols-outlined text-primary mb-2">receipt_long</span>
-                            <p class="font-label-caps text-label-caps text-primary">Entidad de Pago</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-center justify-center">
-                        <div class="w-48 h-48 rounded-full bg-primary-container flex flex-col items-center justify-center text-on-primary shadow-2xl relative z-10">
-                            <span class="material-symbols-outlined text-4xl mb-2" data-weight="fill">medical_services</span>
-                            <span class="font-bold text-center px-4 leading-tight">SISTEMA CREADENT</span>
-                        </div>
-                        <div class="absolute w-[80%] h-0.5 bg-gradient-to-r from-transparent via-primary/20 to-transparent hidden md:block"></div>
-                    </div>
-                    <div class="flex flex-col gap-6">
-                        <div class="glass-card p-5 rounded-xl border border-primary-container/20 text-center hover:scale-105 transition-transform">
-                            <span class="material-symbols-outlined text-primary mb-2">clinical_notes</span>
-                            <p class="font-label-caps text-label-caps text-primary">Doctor / Especialista</p>
-                        </div>
-                        <div class="glass-card p-5 rounded-xl border border-primary-container/20 text-center hover:scale-105 transition-transform">
-                            <span class="material-symbols-outlined text-primary mb-2">inventory</span>
-                            <p class="font-label-caps text-label-caps text-primary">Proveedor de Insumos</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p class="text-center mt-8 text-on-surface-variant italic font-body-md">Representación técnica de flujos de información bidireccionales con entidades externas.</p>
-        </section>
+        <div class="w-full max-w-4xl aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden shadow-[0_40px_40px_-20px_rgba(0,51,85,0.08)] border border-outline-variant/30 bg-surface-container-lowest">
+            <img class="w-full h-full object-cover" src="Resources/Diagramas-DFD por niveles.drawio.png" alt="Imagen">
+        </div>
 
-        <section class="mb-32">
-            <div class="mb-12">
-                <div class="flex items-center gap-3 mb-4">
-                    <span class="material-symbols-outlined text-on-primary-container bg-primary-fixed p-2 rounded-lg">list_alt</span>
-                    <h2 class="font-headline-md text-headline-md text-primary">Lista de Acontecimientos</h2>
-                </div>
-                <p class="text-on-surface-variant max-w-2xl font-body-md">Detalle de los eventos externos que disparan procesos dentro del sistema, clasificados por tipo de interacción.</p>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div class="bg-surface-container-lowest p-8 rounded-2xl border border-surface-container-high soft-shadow">
-                    <div class="flex items-center gap-2 text-primary-container mb-6">
-                        <span class="material-symbols-outlined">calendar_today</span>
-                        <h4 class="font-label-caps text-label-caps font-bold">EVENTOS TEMPORALES</h4>
-                    </div>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <div class="w-1.5 h-1.5 rounded-full bg-primary-container mt-2.5"></div>
-                            <span class="text-on-surface font-body-md">Cierre diario de facturación clínica.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <div class="w-1.5 h-1.5 rounded-full bg-primary-container mt-2.5"></div>
-                            <span class="text-on-surface font-body-md">Envío semanal de recordatorios de citas.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <div class="w-1.5 h-1.5 rounded-full bg-primary-container mt-2.5"></div>
-                            <span class="text-on-surface font-body-md">Auditoría mensual de stock crítico.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-surface-container-lowest p-8 rounded-2xl border border-surface-container-high soft-shadow lg:scale-105 z-10 ring-2 ring-primary-container/10">
-                    <div class="flex items-center gap-2 text-primary-container mb-6">
-                        <span class="material-symbols-outlined">person_add</span>
-                        <h4 class="font-label-caps text-label-caps font-bold">EVENTOS DE USUARIO</h4>
-                    </div>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <div class="w-1.5 h-1.5 rounded-full bg-primary-container mt-2.5"></div>
-                            <span class="text-on-surface font-body-md">Paciente solicita nueva valoración.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <div class="w-1.5 h-1.5 rounded-full bg-primary-container mt-2.5"></div>
-                            <span class="text-on-surface font-body-md">Especialista registra evolución de tratamiento.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <div class="w-1.5 h-1.5 rounded-full bg-primary-container mt-2.5"></div>
-                            <span class="text-on-surface font-body-md">Asistente actualiza datos de anamnesis.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-surface-container-lowest p-8 rounded-2xl border border-surface-container-high soft-shadow">
-                    <div class="flex items-center gap-2 text-primary-container mb-6">
-                        <span class="material-symbols-outlined">sync</span>
-                        <h4 class="font-label-caps text-label-caps font-bold">EVENTOS DE SISTEMA</h4>
-                    </div>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <div class="w-1.5 h-1.5 rounded-full bg-primary-container mt-2.5"></div>
-                            <span class="text-on-surface font-body-md">Respuesta de validación de pago externa.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <div class="w-1.5 h-1.5 rounded-full bg-primary-container mt-2.5"></div>
-                            <span class="text-on-surface font-body-md">Alerta de bajo nivel de insumos quirúrgicos.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <div class="w-1.5 h-1.5 rounded-full bg-primary-container mt-2.5"></div>
-                            <span class="text-on-surface font-body-md">Confirmación de carga de imágenes diagnósticas.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
 
-        <section class="py-20 px-8 bg-primary-container rounded-[2rem] text-center text-on-primary relative overflow-hidden">
-            <div class="absolute -top-24 -right-24 w-64 h-64 bg-primary-fixed/10 rounded-full blur-3xl"></div>
-            <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-primary-fixed/10 rounded-full blur-3xl"></div>
-            <h2 class="font-display-lg text-headline-md md:text-display-lg-mobile mb-6 relative z-10">Próximo Paso: Modelo de Comportamiento</h2>
-            <p class="font-body-lg text-body-lg text-on-primary/80 mb-10 max-w-2xl mx-auto relative z-10">
-                Una vez definido el entorno, profundizaremos en los procesos internos y flujos de datos que dan vida al sistema Creadent.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
-                <a href="modelo-de-comportamiento.html#dfd" class="inline-block bg-white text-primary-container px-10 py-4 rounded-full font-label-caps text-label-caps hover:bg-surface-bright transition-colors shadow-lg">
-                    VER DIAGRAMAS DE FLUJO
-                </a>
-                <button class="border border-white/30 text-white px-10 py-4 rounded-full font-label-caps text-label-caps hover:bg-white/10 transition-colors">DESCARGAR DOCUMENTO COMPLETO</button>
-            </div>
-        </section>
+        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-12">
+            B) Diagrama de Contexto
+        </h1>
+
+        <div class="w-full max-w-4xl aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden shadow-[0_40px_40px_-20px_rgba(0,51,85,0.08)] border border-outline-variant/30 bg-surface-container-lowest">
+            <img class="w-full h-full object-cover" src="Resources/Diagramas-Diagrama de Contexto.drawio.png" alt="Imagen">
+        </div>
+
+
+        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-12">
+            C) Lista de Acontecimientos
+        </h1>
+
+        <div class="w-full max-w-4xl aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden shadow-[0_40px_40px_-20px_rgba(0,51,85,0.08)] border border-outline-variant/30 bg-surface-container-lowest">
+            <img class="w-full h-full object-cover" src="Resources/Diagramas-Diagrama de Contexto.drawio.png" alt="Imagen">
+        </div>
+        
     </main>
 
-    <footer class="w-full py-12 bg-surface-container border-t border-outline-variant mt-20">
-        <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-12">
+    <footer class="bg-surface-container dark:bg-surface-dim w-full py-12 border-t border-outline-variant">
+        <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="space-y-4">
-                <div class="font-display-lg text-headline-md font-bold text-primary">Creadent</div>
-                <p class="text-on-surface-variant font-body-md">Excelencia en Ortodoncia e Implantología Oral. Liderando la transformación digital en salud dental.</p>
+                <span class="font-display-lg text-headline-md font-bold text-primary dark:text-primary-fixed">Creadent</span>
+                <p class="font-body-md text-on-surface-variant pr-8">Innovación en ortodoncia e implantología oral con los más altos estándares de calidad y ética profesional.</p>
             </div>
-            <div class="grid grid-cols-2 gap-4">
-                <div class="space-y-2">
-                    <h5 class="font-label-caps text-label-caps text-primary mb-4">LEGAL</h5>
-                    <a class="text-on-surface-variant hover:text-primary transition-colors block font-body-md" href="#">Privacidad</a>
-                    <a class="text-on-surface-variant hover:text-primary transition-colors block font-body-md" href="#">Términos</a>
-                </div>
-                <div class="space-y-2">
-                    <h5 class="font-label-caps text-label-caps text-primary mb-4">SOCIAL</h5>
-                    <a class="text-on-surface-variant hover:text-primary transition-colors block font-body-md" href="#">Facebook</a>
-                    <a class="text-on-surface-variant hover:text-primary transition-colors block font-body-md" href="#">Instagram</a>
-                    <a class="text-on-surface-variant hover:text-primary transition-colors block font-body-md" href="#">LinkedIn</a>
-                </div>
+            <div class="space-y-4">
+                <h5 class="font-label-caps text-label-caps text-primary uppercase font-bold">Enlaces Rápidos</h5>
+                <ul class="space-y-2">
+                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Facebook</a></li>
+                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Instagram</a></li>
+                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">LinkedIn</a></li>
+                </ul>
             </div>
-            <div class="flex flex-col justify-between">
-                <div class="flex gap-4">
-                    <div class="w-10 h-10 rounded-full bg-surface-dim flex items-center justify-center hover:bg-primary-container hover:text-white transition-all cursor-pointer">
-                        <span class="material-symbols-outlined text-xl">share</span>
-                    </div>
-                </div>
-                <p class="text-on-surface-variant text-sm mt-8">© 2024 Creadent Ortodoncia & Implantologia Oral. Todos los derechos reservados.</p>
+            <div class="space-y-4">
+                <h5 class="font-label-caps text-label-caps text-primary uppercase font-bold">Legal</h5>
+                <ul class="space-y-2">
+                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Privacidad</a></li>
+                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Términos</a></li>
+                </ul>
             </div>
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-desktop mt-12 pt-8 border-t border-outline-variant/30 text-center">
+            <p class="font-body-md text-on-surface-variant opacity-70">© 2024 Creadent Ortodoncia & Implantología Oral. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <button class="fixed bottom-8 right-8 bg-primary text-on-primary w-12 h-12 rounded-full shadow-lg items-center justify-center transition-all opacity-0 pointer-events-none hover:scale-110 active:scale-90 z-40 flex" id="back-to-top">
+        <span class="material-symbols-outlined">north</span>
+    </button>
+
     <script>
+        // Lógica del Menú Móvil (Drawer)
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuContent = document.getElementById('mobile-menu-content');
+        const menuOpenBtn = document.getElementById('menu-open-btn');
+        const menuCloseBtn = document.getElementById('menu-close-btn');
+
+        function openMenu() {
+            mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+            mobileMenuContent.classList.remove('translate-x-full');
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+            mobileMenuContent.classList.add('translate-x-full');
+        }
+
+        if (menuOpenBtn) menuOpenBtn.addEventListener('click', openMenu);
+        if (menuCloseBtn) menuCloseBtn.addEventListener('click', closeMenu);
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) closeMenu();
+        });
+
+        // Botón Back to Top y Visibilidad
+        const backToTop = document.getElementById('back-to-top');
         window.addEventListener('scroll', () => {
-            const nav = document.getElementById('top-nav');
-            if (window.scrollY > 20) {
-                nav.classList.add('shadow-2xl', 'py-2');
-                nav.classList.remove('py-3');
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'pointer-events-none');
             } else {
-                nav.classList.remove('shadow-2xl', 'py-2');
-                nav.classList.add('py-3');
+                backToTop.classList.add('opacity-0', 'pointer-events-none');
             }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
